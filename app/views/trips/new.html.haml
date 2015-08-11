@@ -1,0 +1,47 @@
+= render 'events/background'
+#container.grey
+	%h1.white Hello #{@user.name}, the Treemendous Traveller! 
+	%h2.white Please describe your journey to #{@event.name}
+
+	%button.transport_button.car_b Car
+	%button.transport_button.bus_b Truck/Bus
+	%button.transport_button.train_b Train
+	%button.transport_button.plane_b Plane
+
+	= form_tag(event_trips_path, method: 'post', id: "trip-form") do
+		.transport.car
+			.tip This is a tip!
+			= image_tag "car1.png", class: "logo_trips", align: "left"
+			%ul.question
+				%li= label_tag(:car_km, "Km travelled by car: ")
+				%li= number_field_tag(:car_km)
+			%ul.question
+				%li= label_tag(:car_people, "Number of people: ")
+				%li= number_field_tag(:car_people)
+			%ul.question
+				%li= label_tag(:car_id, "Car Type:")
+				%li= select_tag(:car_id, options_for_select(Car.select), prompt: "Select a size")
+
+		.transport.bus
+			.tip You're awesome!  "A devel­oped coun­try is not a place where the poor have cars, but where the rich use pub­lic trans­port" ~ for­mer Mayor of Bogotá, Colombia.
+			= image_tag "couch1.png", class: "logo_trips", align: "left"
+			%ul.question
+				%li= label_tag(:bus_km, "Kilometers travelled by bus: ")
+				%li= number_field_tag(:bus_km, step: 0.5)
+
+		.transport.train
+			.tip Good work! Train emissions of CO2 per passenger/km are, on average, about half of travel by car.
+			= image_tag "rails.png", class: "logo_trips", align: "left"
+			%ul.question
+				%li= label_tag(:train_km, "Kilometers travelled by train: ")
+				%li= number_field_tag(:train_km, step: 0.5)
+			
+		.transport.plane
+			.tip Did you know? Engineers are currently working on environmentally-friendly biofuels to use in place of kerosene for aviation!
+			= image_tag "plane1.png", class: "logo_trips", align: "left"
+			%ul.question
+				%li= select_tag(:flight_id, options_for_select(Flight.select), prompt: "Origin of Flight")
+			 
+		%div
+			= submit_tag("Go", class: "btn btn-link")
+

@@ -1,0 +1,8 @@
+%script
+  $(".donate_money").bind("keyup paste click", function() {
+  $(".donate_tree").val( ($(this).val() / 12).toFixed(1) );
+  });
+
+  $(".donate_tree").bind("keyup paste click", function() {
+  $(".donate_money").val( ($(this).val() * 12).toFixed(1) );
+  });

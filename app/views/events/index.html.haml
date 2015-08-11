@@ -1,0 +1,48 @@
+%p.white
+= link_to "Sign in as Admin", new_admin_user_session_path
+= image_tag "home.jpg", class: "bg-img"
+#indexcontainer
+  #green-wrapper
+    %h1.white Hi there!
+    %p.white WELCOME TO THIS FUN 5-MINUTE CALCULATOR
+    %p.white AIMED AT INSPIRING US ALL TO LIVE A LITTLE GREENER
+    %ul
+      = form_tag events_path, method: 'get' do
+        = collection_select(:event, :name, Event.order(:id), :id, :name, {:prompt => "Select an Event", :multiple => true }, {:class => "dropdown"})
+      /
+        \-if Event.find(params[:event][:id])?
+      /
+        \-selected_event = Event.find(params[:event][:id])
+    %ul
+      - if false
+        %h2 hello
+    /
+      \%ul
+    /
+      \.begin
+    /
+      \-if @events.try(:any?)
+    /
+      \- @events.each do |event|
+    /
+      \= link_to("Get Started \u2192", new_event_user_path(event), :class => "glyphicon glyphicon-chevron-right")
+    %ul
+      - if @events.try(:any?)
+        - @events.each do |event|
+          %h2.start
+            = link_to("Get Started \u27A2", new_event_user_path(event))
+      - elsif params[:event_search]
+        %h3 No Events Found
+  #caption-wrapper
+
+    %h1.grey.outline CARBON
+    %h2.white CALCULATOR
+  = image_tag "reliance.png", class: "banner", align: "right"
+  = image_tag "greenpop.png", class: "banner banner1", align: "right"
+  = image_tag "couch1.png", class: "logo", align: "left"
+  = image_tag "car1.png", class: "logo", align: "left"
+  = image_tag "rails.png", class: "logo", align: "left"
+  = image_tag "plane1.png", class: "logo2", align: "left"
+  = image_tag "tree1.png", class: "logo2", align: "left"
+
+  #grey-wrapper

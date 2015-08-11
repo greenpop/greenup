@@ -1,0 +1,10 @@
+= render 'events/background'
+#container.grey
+	%h1.green My Green Pledge
+
+	= form_for @pledge, url: event_pledges_path(@event) do |f|
+		%ul
+			%li.white
+				= f.text_area(:about, placeholder: "By #{1.month.from_now.strftime("%B %e, %Y")}, I pledge to plant 3 trees and...")
+			%li
+				= f.submit("I commit!", class: "button")

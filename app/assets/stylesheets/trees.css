@@ -1,0 +1,12 @@
+.snapscan {
+  display: inline-block;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 17%;
+  top: 45%;
+  margin-top: 1em;
+  margin-right: 1.5em;
+  margin-left: .5em;
+  margin-bottom: 1em;
+  z-index: 9999;
+}
