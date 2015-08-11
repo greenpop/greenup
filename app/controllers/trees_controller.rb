@@ -12,7 +12,6 @@ class TreesController < ApplicationController
     @event = Event.find(@tree.event_id)
 
     UserMailer.tree_email(@user, @tree, @event).deliver
-
     redirect_to @event, notice: "Thank you for your contribution. You're tree-mendous!"
   end
 
