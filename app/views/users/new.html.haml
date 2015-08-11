@@ -1,0 +1,17 @@
+= render 'events/background'
+
+#container.grey
+	%h1.green GreenUP Travel App
+	%h2.white Calculate your travel footprint to #{@event.name}
+	
+	= form_for @user, url: event_users_path do |f|
+		%ul.white
+			%li
+				= f.text_field(:name, autofocus: true, placeholder: 'Name')
+			%li
+				= f.text_field(:surname, placeholder: 'Surname')
+			%li
+				= f.email_field(:email, placeholder: 'Email')
+
+			#email_input_response Please tell us your name.
+

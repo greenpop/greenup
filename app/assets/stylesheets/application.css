@@ -1,0 +1,264 @@
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/*Color*/
+.green{color:#96D437;}
+
+.white{color:white;}
+
+.black{color:black;}
+
+.grey{color:#323533;}
+
+.lightgrey{color:#C9CCCB;}
+
+/*all text*/
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+/*white overlay on all pages*/
+#container {
+	text-align: center;
+	margin: 8%;
+	padding: 35px;
+	background-color: white;
+	opacity: .90;
+}
+
+h1 {
+	font-family: 'Kameron', serif;
+	font-size: 44px;
+	margin: 0;
+}
+
+p {
+  font-size: 16px;
+  margin: 0;
+	padding: 10px;
+}
+
+p.white.donate {
+  padding: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:link{
+  color: white;
+}
+
+a:visited {
+  color: white;
+  text-shadow: none;
+}
+
+a:hover {
+  color: #375C12;
+}
+
+ul {
+    padding: 0;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#money-amount {
+	font-size: 50px;
+  color: #8AE62E;
+}
+
+#money-message {
+  color:white;
+  margin: 20px;
+  font-size: 22px;
+  font-color:white;
+}
+
+input {
+	font-weight: 500;
+	font-size: 35px;
+  margin-top: 8px;
+	padding-left: 15px;
+	outline: none;
+	background: #fff;
+}
+
+input#user_name {
+  margin-top: 0px;
+}
+
+input#user_surname {
+  margin-top: 0px;
+}
+
+input#user_email {
+  margin-top: 0px;
+}
+
+input[type=number] {
+	width: 90px;
+}
+
+textarea {
+  padding: 5px;
+}
+
+.btn-link {
+  font-family: 'Kameron', serif;
+  font-size: 32px;
+  font-weight: 800;
+  cursor: pointer;
+  border: thin solid black;
+  text-decoration:none;
+  text-shadow: 1px 1px 4px #000;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  color: #1F0F00;
+  background-color: #c76744;
+
+  &:active {
+    position:relative;
+    top:1px;
+  }
+
+  &:focus {
+    outline: none;  
+  }
+}
+
+.btn-link:hover {
+  color: #375C12;
+  transition: 0.3;
+}
+
+.button {
+	font-family: 'Kameron', serif;
+	font-size: 32px;
+  font-weight: 800;
+	cursor: pointer;
+	border: thin solid black;
+	text-decoration:none;
+  text-shadow: 1px 1px 4px #000;
+  border-radius: 8px;
+  padding: 20px;
+	margin: 10px;
+  color: #1F0F00;
+  background-color: #c76744;
+
+  &:active {
+    position:relative;
+    top:1px;
+  }
+
+  &:focus {
+    outline: none;  
+  }
+}
+
+.button:hover {
+  color: #375C12;
+  transition: 0.3;
+}
+
+.snapscan{
+  background-color: #c6f3c5;
+  color: green;
+  border: thin solid green;
+  padding: 5px;
+  font-size: 12px;
+  margin-bottom: 2px;
+  border-radius: 3px;
+}
+
+.bg-img {
+  position: fixed; left: 0; top: 0;
+  min-width: 100%; min-height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: auto; height: auto; z-index: -100;
+}
+
+.notice {
+  background-color: #c6f3c5;
+  color: green;
+  border: thin solid green;
+  padding: 20px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.small {
+  font-size: 16px;
+  padding: 10px;
+  color: #8AE62E;
+}
+
+.tip {
+  float: right;
+  background-color: rgba(255,255,255,.8);
+  height: 60px;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+.train .tip {
+  width: 300px;
+}
+
+.bus .tip {
+  width: 400px;
+}
+
+.car .tip {
+  width: 200px;
+}
+
+.plane .tip{
+  width: 400px;
+}
+
+#option {
+  width: 240px;
+  height: 34px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.dropdown {
+  font-size: 20px;
+  list-style-type: none;
+  padding: 10px;
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 7px;
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  color: #000;
+}

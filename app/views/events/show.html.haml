@@ -1,0 +1,12 @@
+= render 'events/background'
+#container.grey
+  - if flash[:notice]
+    .notice= flash[:notice]
+  %h1.green= @event.name
+  %ul.white
+    %li #{@total_trips} people have completed this survey
+    %li #{@total_carbon} kg of carbon were emitted travelling here
+    %li #{@total_km} km have been travelled
+    %li= pluralize(@total_pledge, "pledge") + " " + (@total_pledge == 1 ? "has" : "have") + " been made"
+  %br
+  =link_to("Calculate again", new_event_user_path(@event), class: "button")
