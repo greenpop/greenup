@@ -8,7 +8,6 @@ class PledgesController < ApplicationController
   def create
     @user = User.find_by(email: user_params[:email])
   	@pledge = Pledge.create(pledge_params.merge({user_id: session[:user_id], event_id: @event.id}))
-    end
   end
 
   private
