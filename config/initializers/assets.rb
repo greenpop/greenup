@@ -1,0 +1,7 @@
+Rails.application.config.assets.precompile += %w( bootstrap.css )
+Rails.application.config.assets.precompile += %w( events.css )
+Rails.application.config.assets.precompile += %w( pledges.css )
+Rails.application.config.assets.precompile += %w( responsive.css )
+Rails.application.config.assets.precompile += %w( trees.css )
+Rails.application.config.assets.precompile += %w( trip.css )
+Rails.application.config.assets.precompile += %w( users.css )
