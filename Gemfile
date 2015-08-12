@@ -44,6 +44,9 @@ gem 'rails_12factor', group: :production
 #SendGrid for emails
 gem 'sendgrid'
 
+#offline caching
+gem 'rack-offline'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
