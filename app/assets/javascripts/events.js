@@ -11,7 +11,7 @@
 
 $( document ).ready(function() {
 	$('#event_name').change(function() { 
-		window.location = "/events/"+this.selectedIndex+"/users/new";
+		window.location = "/events/"+this.value+"/users/new";
 	});
 });
 
