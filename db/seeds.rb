@@ -42,3 +42,5 @@ variables.each do |variable|
     v.value = variable[1]
   end
 end
+
+AdminUser.create! email: "admin1@example.com", password: "password"
