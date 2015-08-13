@@ -1,0 +1,130 @@
+
+
+Started GET "/application.manifest" for 127.0.0.1 at 2015-08-12 16:55:48 +0200
+
+
+Started GET "/events/1/trips/new" for 127.0.0.1 at 2015-08-12 16:55:49 +0200
+Processing by TripsController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (1.0ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 35]]
+  Rendered events/_background.html.haml (2.0ms)
+  [1m[36mCar Load (0.8ms)[0m  [1mSELECT "cars".* FROM "cars"[0m
+  [1m[35mFlight Load (1.9ms)[0m  SELECT "flights".* FROM "flights"
+  Rendered trips/new.html.haml within layouts/application (41.1ms)
+Completed 200 OK in 534ms (Views: 471.6ms | ActiveRecord: 20.1ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2015-08-12 16:55:49 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (0.5ms)
+  Rendered users/new.html.haml within layouts/application (14.4ms)
+Completed 200 OK in 276ms (Views: 273.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/1/trees/new?amount=30" for 127.0.0.1 at 2015-08-12 16:55:50 +0200
+Processing by TreesController#new as HTML
+  Parameters: {"amount"=>"30", "event_id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/_background.html.haml (0.5ms)
+  Rendered trees/new.html.haml within layouts/application (12.6ms)
+Completed 200 OK in 288ms (Views: 280.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/events/1/pledges/new" for 127.0.0.1 at 2015-08-12 16:55:50 +0200
+Processing by PledgesController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.8ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (1.1ms)
+  Rendered pledges/new.html.haml within layouts/application (11.6ms)
+Completed 200 OK in 275ms (Views: 266.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2015-08-12 16:55:50 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "trips"  WHERE "trips"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35m (0.3ms)[0m  SELECT "trips"."carbon" FROM "trips"  WHERE "trips"."event_id" = $1  [["event_id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT "trips"."km_travelled" FROM "trips"  WHERE "trips"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."event_id" = $1  [["event_id", 1]]
+  Rendered events/_background.html.haml (0.4ms)
+  Rendered events/show.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 321ms (Views: 296.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-12 16:55:51 +0200
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (1.2ms)[0m  [1mSELECT "events".* FROM "events"   ORDER BY "events"."id" ASC[0m
+  Rendered events/index.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 333ms (Views: 331.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/application.manifest" for 127.0.0.1 at 2015-08-12 16:55:51 +0200
+
+
+Started GET "/application.manifest" for 127.0.0.1 at 2015-08-12 16:56:06 +0200
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2015-08-12 16:56:06 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[35mEvent Load (0.6ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/_background.html.haml (0.5ms)
+  Rendered users/new.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 289ms (Views: 287.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/1/trips/new" for 127.0.0.1 at 2015-08-12 16:56:06 +0200
+Processing by TripsController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 35]]
+  Rendered events/_background.html.haml (0.5ms)
+  [1m[36mCar Load (0.4ms)[0m  [1mSELECT "cars".* FROM "cars"[0m
+  [1m[35mFlight Load (0.3ms)[0m  SELECT "flights".* FROM "flights"
+  Rendered trips/new.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 279ms (Views: 275.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/events/1/trees/new?amount=30" for 127.0.0.1 at 2015-08-12 16:56:06 +0200
+Processing by TreesController#new as HTML
+  Parameters: {"amount"=>"30", "event_id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (0.8ms)
+  Rendered trees/new.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 267ms (Views: 265.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/pledges/new" for 127.0.0.1 at 2015-08-12 16:56:07 +0200
+Processing by PledgesController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/_background.html.haml (0.9ms)
+  Rendered pledges/new.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 275ms (Views: 273.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2015-08-12 16:56:07 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "trips"  WHERE "trips"."event_id" = $1  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "trips"."carbon" FROM "trips"  WHERE "trips"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35m (0.5ms)[0m  SELECT "trips"."km_travelled" FROM "trips"  WHERE "trips"."event_id" = $1  [["event_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "pledges"  WHERE "pledges"."event_id" = $1[0m  [["event_id", 1]]
+  Rendered events/_background.html.haml (0.6ms)
+  Rendered events/show.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 281ms (Views: 271.7ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-12 16:56:07 +0200
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"   ORDER BY "events"."id" ASC
+  Rendered events/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 269ms (Views: 268.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/application.manifest" for 127.0.0.1 at 2015-08-12 16:56:08 +0200
