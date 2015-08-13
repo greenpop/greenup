@@ -1,0 +1,1 @@
+<html><body>You are being <a href="https://github.com/BorisMoore/jquery-tmpl/raw/master/jquery.tmpl.js">redirected</a>.</body></html>

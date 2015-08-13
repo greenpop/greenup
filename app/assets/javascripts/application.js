@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require_tree .
 
+$(function(){
+	if(!localStorage["pendingEmails"]){
+		localStorage["pendingItems"] = JSON.stringify([]);
+	}
+})
