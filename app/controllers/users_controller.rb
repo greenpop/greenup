@@ -7,9 +7,9 @@ class UsersController < ApplicationController
   def create
     @user = User.find_by(email: user_params[:email])
     unless @user
-      @user = User.new(user_params)
-      session[:user_id] = @user.id
+      @user = User.create(user_params)
     end
+    session[:user_id] = @user.id
     redirect_to new_event_trip_path
   end
 
