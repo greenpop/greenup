@@ -10,6 +10,7 @@ class UsersController < ApplicationController
       @user = User.new(user_params)
       session[:user_id] = @user.id
     end
+    redirect_to new_event_trip_path
   end
 
   private
