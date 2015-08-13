@@ -1,14 +1,10 @@
 <!DOCTYPE html>
 <html manifest="/application.manifest">
 <head>
-	<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Kameron">
-	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto"> -->
   <title>GreenUp Travel App</title>
   <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
+  <%= javascript_include_tag 'application', "jquery.tmpl", "json", "jquery.offline" %>
   <%= csrf_meta_tags %>
-  <!-- <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'> -->
 </head>
 <body>
 
