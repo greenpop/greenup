@@ -3346,3 +3346,67 @@ Processing by UsersController#new as HTML
   Rendered users/new.html.haml within layouts/application (8.2ms)
 Completed 200 OK in 160ms (Views: 158.8ms | ActiveRecord: 0.3ms)
 >>>>>>> 3a8ed577947b3d4f919aac72da9c0d8295a9e59b
+  [1m[36mActiveRecord::SchemaMigration Load (84.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (173.5ms)[0m  DELETE FROM "flights"
+  [1m[36mSQL (73.2ms)[0m  [1mDELETE FROM "cars"[0m
+  [1m[35mSQL (62.4ms)[0m  DELETE FROM "variables"
+  [1m[36mFlight Load (1.2ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'South Africa'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.192], ["distance", 1000], ["origin", "South Africa"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mFlight Load (0.5ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Southern Africa'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.192], ["distance", 4000], ["origin", "Southern Africa"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mFlight Load (0.4ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Northern Africa'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 8000], ["origin", "Northern Africa"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mFlight Load (0.5ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Europe'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 10000], ["origin", "Europe"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mFlight Load (0.4ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Australia'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 11000], ["origin", "Australia"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mFlight Load (0.4ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Middle East'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 8000], ["origin", "Middle East"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mFlight Load (0.6ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Far East'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 13000], ["origin", "Far East"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mFlight Load (0.5ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'North America (East Coast)'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 12500], ["origin", "North America (East Coast)"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mFlight Load (0.5ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'North America (West Coast)'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 16000], ["origin", "North America (West Coast)"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mFlight Load (0.5ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'South America'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 8000], ["origin", "South America"]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  [1m[36mCar Load (0.4ms)[0m  [1mSELECT  "cars".* FROM "cars"  WHERE "cars"."size" = 'Small'  ORDER BY "cars"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "cars" ("carbon_per_km", "size") VALUES ($1, $2) RETURNING "id"[0m  [["carbon_per_km", 0.4], ["size", "Small"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mCar Load (0.4ms)[0m  [1mSELECT  "cars".* FROM "cars"  WHERE "cars"."size" = 'Medium'  ORDER BY "cars"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "cars" ("carbon_per_km", "size") VALUES ($1, $2) RETURNING "id"[0m  [["carbon_per_km", 0.5], ["size", "Medium"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mCar Load (0.4ms)[0m  [1mSELECT  "cars".* FROM "cars"  WHERE "cars"."size" = 'Large'  ORDER BY "cars"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("carbon_per_km", "size") VALUES ($1, $2) RETURNING "id"[0m  [["carbon_per_km", 0.6], ["size", "Large"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mVariable Load (0.5ms)[0m  [1mSELECT  "variables".* FROM "variables"  WHERE "variables"."name" = 'train_carbon_per_km'  ORDER BY "variables"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "variables" ("name", "value") VALUES ($1, $2) RETURNING "id"[0m  [["name", "train_carbon_per_km"], ["value", 0.047]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mVariable Load (0.4ms)[0m  [1mSELECT  "variables".* FROM "variables"  WHERE "variables"."name" = 'bus_carbon_per_km'  ORDER BY "variables"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "variables" ("name", "value") VALUES ($1, $2) RETURNING "id"[0m  [["name", "bus_carbon_per_km"], ["value", 0.109]]
+  [1m[35m (0.4ms)[0m  COMMIT

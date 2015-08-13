@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Flight.delete_all
+Car.delete_all
+Variable.delete_all
 flights = [['South Africa', 1000, 0.192],
                ['Southern Africa', 4000, 0.192],
                ['Northern Africa', 8000, 0.226],
