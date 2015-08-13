@@ -3410,3 +3410,175 @@ Completed 200 OK in 160ms (Views: 158.8ms | ActiveRecord: 0.3ms)
   [1m[35m (0.1ms)[0m  BEGIN
   [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "variables" ("name", "value") VALUES ($1, $2) RETURNING "id"[0m  [["name", "bus_carbon_per_km"], ["value", 0.109]]
   [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (42.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (61.9ms)[0m  DELETE FROM "flights"
+  [1m[36mSQL (31.8ms)[0m  [1mDELETE FROM "cars"[0m
+  [1m[35mSQL (30.0ms)[0m  DELETE FROM "variables"
+  [1m[36mFlight Load (22.2ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'South Africa'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (11.1ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.192], ["distance", 1000], ["origin", "South Africa"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mFlight Load (0.6ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Southern Africa'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.192], ["distance", 4000], ["origin", "Southern Africa"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mFlight Load (0.5ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Northern Africa'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 8000], ["origin", "Northern Africa"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mFlight Load (0.3ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Europe'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 10000], ["origin", "Europe"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFlight Load (0.3ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Australia'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 11000], ["origin", "Australia"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFlight Load (0.3ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Middle East'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 8000], ["origin", "Middle East"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFlight Load (0.3ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'Far East'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 13000], ["origin", "Far East"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFlight Load (0.3ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'North America (East Coast)'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 12500], ["origin", "North America (East Coast)"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFlight Load (0.2ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'North America (West Coast)'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 16000], ["origin", "North America (West Coast)"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mFlight Load (0.3ms)[0m  [1mSELECT  "flights".* FROM "flights"  WHERE "flights"."origin" = 'South America'  ORDER BY "flights"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "flights" ("carbon_per_km", "distance", "origin") VALUES ($1, $2, $3) RETURNING "id"[0m  [["carbon_per_km", 0.226], ["distance", 8000], ["origin", "South America"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mCar Load (0.2ms)[0m  [1mSELECT  "cars".* FROM "cars"  WHERE "cars"."size" = 'Small'  ORDER BY "cars"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (9.2ms)[0m  [1mINSERT INTO "cars" ("carbon_per_km", "size") VALUES ($1, $2) RETURNING "id"[0m  [["carbon_per_km", 0.4], ["size", "Small"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mCar Load (0.4ms)[0m  [1mSELECT  "cars".* FROM "cars"  WHERE "cars"."size" = 'Medium'  ORDER BY "cars"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("carbon_per_km", "size") VALUES ($1, $2) RETURNING "id"[0m  [["carbon_per_km", 0.5], ["size", "Medium"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36mCar Load (0.3ms)[0m  [1mSELECT  "cars".* FROM "cars"  WHERE "cars"."size" = 'Large'  ORDER BY "cars"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "cars" ("carbon_per_km", "size") VALUES ($1, $2) RETURNING "id"[0m  [["carbon_per_km", 0.6], ["size", "Large"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mVariable Load (0.3ms)[0m  [1mSELECT  "variables".* FROM "variables"  WHERE "variables"."name" = 'train_carbon_per_km'  ORDER BY "variables"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (9.1ms)[0m  [1mINSERT INTO "variables" ("name", "value") VALUES ($1, $2) RETURNING "id"[0m  [["name", "train_carbon_per_km"], ["value", 0.047]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mVariable Load (0.4ms)[0m  [1mSELECT  "variables".* FROM "variables"  WHERE "variables"."name" = 'bus_carbon_per_km'  ORDER BY "variables"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "variables" ("name", "value") VALUES ($1, $2) RETURNING "id"[0m  [["name", "bus_carbon_per_km"], ["value", 0.109]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-13 12:30:20 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (29.2ms)[0m  SELECT "events".* FROM "events"   ORDER BY "events"."id" ASC
+  Rendered events/index.html.haml within layouts/application (58.4ms)
+Completed 200 OK in 489ms (Views: 456.1ms | ActiveRecord: 31.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-13 12:30:20 +0200
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"   ORDER BY "events"."id" ASC[0m
+  Rendered events/index.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 192ms (Views: 191.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/application.manifest" for 127.0.0.1 at 2015-08-13 12:30:20 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-08-13 12:30:20 +0200
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"   ORDER BY "events"."id" ASC
+  Rendered events/index.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 188ms (Views: 187.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/application.manifest" for 127.0.0.1 at 2015-08-13 12:30:21 +0200
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2015-08-13 12:30:22 +0200
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  puma (2.9.0) lib/puma/server.rb:490:in `handle_request'
+  puma (2.9.0) lib/puma/server.rb:361:in `process_client'
+  puma (2.9.0) lib/puma/server.rb:254:in `block in run'
+  puma (2.9.0) lib/puma/thread_pool.rb:92:in `call'
+  puma (2.9.0) lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+
+
+  Rendered /Users/kgreenwood/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/kgreenwood/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.7ms)
+  Rendered /Users/kgreenwood/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.7ms)
+  Rendered /Users/kgreenwood/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (120.4ms)
+
+
+Started GET "/events/6/users/new" for 127.0.0.1 at 2015-08-13 12:30:24 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered events/_background.html.haml (1.7ms)
+  Rendered users/new.html.haml within layouts/application (12.8ms)
+Completed 200 OK in 179ms (Views: 174.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/application.manifest" for 127.0.0.1 at 2015-08-13 12:30:24 +0200
+
+
+Started GET "/events/6/users/new" for 127.0.0.1 at 2015-08-13 12:30:24 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"6"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered events/_background.html.haml (1.5ms)
+  Rendered users/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 179ms (Views: 176.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/application.manifest" for 127.0.0.1 at 2015-08-13 12:30:26 +0200
+
+
+Started GET "/events/9/users/new" for 127.0.0.1 at 2015-08-13 12:30:28 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"9"}
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  Rendered events/_background.html.haml (1.2ms)
+  Rendered users/new.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 158ms (Views: 156.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/application.manifest" for 127.0.0.1 at 2015-08-13 12:30:28 +0200
+
+
+Started GET "/events/9/users/new" for 127.0.0.1 at 2015-08-13 12:30:28 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"9"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 9]]
+  Rendered events/_background.html.haml (1.6ms)
+  Rendered users/new.html.haml within layouts/application (6.1ms)
+Completed 200 OK in 172ms (Views: 170.7ms | ActiveRecord: 0.4ms)
