@@ -21,37 +21,44 @@ ActiveAdmin.register User do
   
   index do
 
-  total_carbon = []
-  total_donation = []
-  total_car_carbon = []
-  total_flight_carbon = []
-  total_bus_carbon = []
-  total_train_carbon = []
+    total_carbon = []
+    total_donation = []
+    total_car_carbon = []
+    total_flight_carbon = []
+    total_bus_carbon = []
+    total_train_carbon = []
 
     column "Signed Up", sortable: :created_at do |u|
       u.created_at.strftime("%B %e, %Y, %H:%M")
     end
+
     column :name
     column :surname
     column :email
+
     column "Distance Travelled (km)" do |user|
       user.total(:km_travelled)
     end
+
     column "Event", :sortable do |user|
       user.trips[0].event.name
     end
+
     column "Car CO" do |user|
       total_car_carbon << user.trips[0][:car_carbon]
       user.trips[0][:car_carbon]
     end
+
     column "Plane CO" do |user|
       total_flight_carbon << user.trips[0][:flight_carbon]
       user.trips[0][:flight_carbon]  
     end
+
     column "Train CO" do |user|
       total_train_carbon << user.trips[0][:train_carbon]
       user.trips[0][:train_carbon]
     end
+
     column "Bus CO" do |user|
       total_bus_carbon << user.trips[0][:bus_carbon]
       user.trips[0][:bus_carbon]
@@ -61,17 +68,17 @@ ActiveAdmin.register User do
       total_carbon << user.total(:carbon)
       user.total(:carbon)
     end
+
     column "Donation (ZAR)" do |user|
       total_donation << user.total_donation
       user.total_donation
     end
+
     column "Pledges" do |user|
       user.pledges_summary
     end
 
-
-
-    div :class => "Row" do |user|
+    div :class => "Row" do |user| 
       "Total Carbon Generated: " + total_carbon.sum.to_s + " kg"
     end
 
@@ -89,16 +96,17 @@ ActiveAdmin.register User do
   # end
 
   csv do
-  total_carbon = []
-  total_donation = []
-  total_car_carbon = []
-  total_flight_carbon = []
-  total_bus_carbon = []
-  total_train_carbon = []
+    total_carbon = []
+    total_donation = []
+    total_car_carbon = []
+    total_flight_carbon = []
+    total_bus_carbon = []
+    total_train_carbon = []
 
     column :name
     column :surname
     column :email
+
     column "Distance Travelled (km)" do |user|
       user.total(:km_travelled)
     end
@@ -110,12 +118,15 @@ ActiveAdmin.register User do
     column "Car CO" do |user|
       user.trips[0][:car_carbon]
     end
+
     column "Plane CO" do |user|
       user.trips[0][:flight_carbon]  
     end
+
     column "Train CO" do |user|
       user.trips[0][:train_carbon]
     end
+
     column "Bus CO" do |user|
       user.trips[0][:bus_carbon]
     end
@@ -123,20 +134,22 @@ ActiveAdmin.register User do
     column "Carbon (kg)" do |user|
       user.total(:carbon)
     end
+
     column "Donation (ZAR)" do |user|
       user.total_donation
     end
+
     column "Pledges" do |user|
       user.pledges_summary
     end
+
     column "Total Carbon" do |user|
       total_carbon.sum.to_s
     end
+
     column "Total Donation" do |user|
       total_donation.sum.to_s 
     end
-
   end
-
   
 end
