@@ -79,11 +79,11 @@ ActiveAdmin.register User do
     end
 
     div :class => "Row" do |user| 
-      "Total Carbon Generated: " + total_carbon.sum.to_s + " kg"
+      "Total Carbon Generated: " + total_carbon.compact.sum.to_s + " kg"
     end
 
     div :class => "Row2" do |user|
-      "Total Funds Raised: R" + total_donation.sum.to_s
+      "Total Funds Raised: R" + total_donation.compact.sum.to_s
     end
 
   end
@@ -144,12 +144,13 @@ ActiveAdmin.register User do
     end
 
     column "Total Carbon" do |user|
-      total_carbon.sum.to_s
+      total_carbon.compact.sum.to_s
     end
 
     column "Total Donation" do |user|
-      total_donation.sum.to_s 
+      total_donation.compact.sum.to_s 
     end
+
   end
   
 end
