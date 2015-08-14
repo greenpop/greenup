@@ -6,6 +6,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.find_by(email: user_params[:email])
+    @users = User.all
     unless @user
       @user = User.create(user_params)
     end

@@ -220,6 +220,7 @@ textarea {
   height: 60px;
   border-radius: 3px;
   padding: 8px;
+  text-align: center;
 }
 
 .train .tip {
@@ -231,7 +232,10 @@ textarea {
 }
 
 .car .tip {
-  width: 200px;
+  width: 170px;
+  position: relative;
+  right: 40%;
+  height: 35px;
 }
 
 .plane .tip{
