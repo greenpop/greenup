@@ -10,3 +10,5 @@ class Event < ActiveRecord::Base
     self.trips.pluck(carbon_or_km).inject{ |sum,x| sum + x }
   end
 end
+
+# why the > in has_attached_file ... :medium => "300x300>"
