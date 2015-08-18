@@ -33,6 +33,7 @@ gem 'haml'
 gem 'devise', '~> 3.2.4'
 # adminstrative side
 gem 'activeadmin', github: 'gregbell/active_admin'
+
 # file attachment
 # gem 'carrierwave'
 gem 'paperclip', "~> 4.1"

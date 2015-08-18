@@ -19,22 +19,22 @@ class Trip < ActiveRecord::Base
 		# car
 		if params[:car_id].present?
 			car = Car.find(params[:car_id]) 
-	    	carbon += car.calculate_carbon(params[:car_km], params[:car_people])
-	    	self.update_attributes(car_carbon: car.calculate_carbon(params[:car_km], params[:car_people]))
-	    end
+    	carbon += car.calculate_carbon(params[:car_km], params[:car_people])
+    	self.update_attributes(car_carbon: car.calculate_carbon(params[:car_km], params[:car_people]))
+    end
 
-	    # bus
-	    if params[:bus_km].present?
-		    bus_carbon_per_km = Variable.get("bus_carbon_per_km")
-		    carbon += params[:bus_km].to_i * bus_carbon_per_km 
-		    self.update_attributes(bus_carbon: params[:bus_km].to_i * bus_carbon_per_km)
+    # bus
+    if params[:bus_km].present?
+	    bus_carbon_per_km = Variable.get("bus_carbon_per_km")
+	    carbon += params[:bus_km].to_i * bus_carbon_per_km 
+	    self.update_attributes(bus_carbon: params[:bus_km].to_i * bus_carbon_per_km)
 		end
 
+		# train
 		if params[:train_km].present?
-		    # train
-		    train_carbon_per_km = Variable.get("train_carbon_per_km")
-		    carbon += params[:train_km].to_i * train_carbon_per_km 
-		    self.update_attributes(train_carbon: params[:train_km].to_i * train_carbon_per_km)
+	    train_carbon_per_km = Variable.get("train_carbon_per_km")
+	    carbon += params[:train_km].to_i * train_carbon_per_km 
+	    self.update_attributes(train_carbon: params[:train_km].to_i * train_carbon_per_km)
 		end
 
 		self.update_attributes(carbon: carbon, km_travelled: total_km)

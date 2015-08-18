@@ -2,7 +2,8 @@ ActiveAdmin.register Event do
 
   permit_params :name, :about, :start_date, :end_date, :background
 
-
+# new event form /admin/events/new
+# & edit event form /admin/events/:event_id/edit
   form do |f|
     f.inputs "Project Details" do
       f.input :name
@@ -13,8 +14,9 @@ ActiveAdmin.register Event do
       # Will preview the image when the object is edited
     end
     f.actions
-   end
+  end
 
+# show event /admin/events/:event_id
   show do |event|
     attributes_table do
       row :name
@@ -26,16 +28,17 @@ ActiveAdmin.register Event do
       end
       # Will display the image on show object page
     end
-   end
+  end
 
+# event index (/admin/events)
   index do |event|
-      column :name
-      column :about
-      column :start_date
-      column :end_date
+    column :name
+    column :about
+    column :start_date
+    column :end_date
 
-      actions
-    end
+    actions
+  end
 
 
   
