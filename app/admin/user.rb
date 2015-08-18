@@ -3,7 +3,7 @@ ActiveAdmin.register User do
 
   filter :name_or_surname_cont, label: 'Name / Surname'
   filter :email
-  filter :event
+  filter :event, collection: -> {Event.all}, label: 'Events'
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -27,6 +27,7 @@ ActiveAdmin.register User do
     total_flight_carbon = []
     total_bus_carbon = []
     total_train_carbon = []
+    total_distance = []
 
     column "Signed Up", sortable: :created_at do |u|
       u.created_at.strftime("%B %e, %Y, %H:%M")
@@ -37,31 +38,42 @@ ActiveAdmin.register User do
     column :email
 
     column "Distance Travelled (km)" do |user|
-      user.total(:km_travelled)
+      user.trips.each do |trip|
+        if trip.event ==  
+          total_distance << trip.km_travelled
+        end
+      end
+      user.trips.collect(&:km_travelled).join(', ')
     end
 
     column "Event", :sortable do |user|
-      user.trips[0].event.name
+      events = []
+      user.trips.each do |trip|
+        events << Event.find(trip.event_id)
+      end
+      events.collect(&:name).join(', ')
+
+      # user.trips[0].event.name
     end
 
     column "Car CO" do |user|
       total_car_carbon << user.trips[0][:car_carbon]
-      user.trips[0][:car_carbon]
+      user.trips.collect(&:car_carbon).join(', ')
     end
 
     column "Plane CO" do |user|
       total_flight_carbon << user.trips[0][:flight_carbon]
-      user.trips[0][:flight_carbon]  
+      user.trips.collect(&:flight_carbon).join(', ')
     end
 
     column "Train CO" do |user|
       total_train_carbon << user.trips[0][:train_carbon]
-      user.trips[0][:train_carbon]
+      user.trips.collect(&:train_carbon).join(', ')
     end
 
     column "Bus CO" do |user|
       total_bus_carbon << user.trips[0][:bus_carbon]
-      user.trips[0][:bus_carbon]
+      user.trips.collect(&:bus_carbon).join(', ')
     end
 
     column "Total Carbon (kg)" do |user|
@@ -86,6 +98,9 @@ ActiveAdmin.register User do
       "Total Funds Raised: R" + total_donation.compact.sum.to_s
     end
 
+    div :class => "Row3" do |user|
+      "Total distance travelled: " + total_distance.compact.sum.to_s + "km"
+    end
   end
 
   # index row_class: ->elem { 'active' if elem.active? } do
@@ -102,6 +117,7 @@ ActiveAdmin.register User do
     total_flight_carbon = []
     total_bus_carbon = []
     total_train_carbon = []
+    total_distance = []
 
     column :name
     column :surname
