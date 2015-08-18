@@ -11,6 +11,9 @@
 	= form_tag(event_trips_path, method: 'post', id: "trip-form") do
 		.transport.car
 			.tip This is a tip!
+			%br
+			%br
+			%br
 			= image_tag "car1.png", class: "logo_trips", align: "left"
 			%ul.question
 				%li= label_tag(:car_km, "Km travelled by car: ")

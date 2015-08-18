@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   def create
     @event = Event.find(params[:event_id])
     @user = User.find_by(email: user_params[:email])
+    @users = User.all
     unless @user
       @user = User.create(user_params)
     end

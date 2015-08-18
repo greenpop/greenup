@@ -58,6 +58,5 @@ $( document ).ready(function() {
       alert("Please fill out all the car attributes.");
       e.preventDefault(); 
     }
-    
   });
 });

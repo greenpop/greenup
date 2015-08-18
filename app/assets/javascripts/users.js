@@ -14,7 +14,7 @@ function checkInput(){
     $("#email_input_response").html('Please enter your valid email address.');
   } // Old User
   else {
-    $("#email_input_response").html('<input class="button" name="commit" type="submit" value="Get Started">');
+    $("#email_input_response").html('<input class="button" name="commit" type="submit" value="Get Started" id="new_user_btn">');
   }
 }
 
