@@ -38,8 +38,9 @@ ActiveAdmin.register User do
     column :email
 
     column "Distance Travelled (km)" do |user|
+      binding.pry
       user.trips.each do |trip|
-        if trip.event ==  
+        if trip.event ==  :event
           total_distance << trip.km_travelled
         end
       end
