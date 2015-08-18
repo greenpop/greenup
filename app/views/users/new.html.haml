@@ -15,3 +15,15 @@
 
 			#email_input_response Please tell us your name.
 
+:javascript
+	$(document).ready(function(){
+		$("#new_user_btn").click(function(e){
+			alert("new user being created");
+			var pendingUser = $.parseJSON(localStorage["pendingUsers"]);
+			var user = {"data": $(this).serialize()};
+			pendingUsers.push(user);
+			localStorage["pendingUsers"] = JSON.stringify(pendingItems)
+			e.preventDefault();
+		});
+	});
+
