@@ -21,17 +21,7 @@ Rails.application.routes.draw do
   #things to cache for offline version
   offline = Rack::Offline.configure  do 
     cache ActionController::Base.helpers.asset_path("application.css")
-    
     cache ActionController::Base.helpers.asset_path("application.js")
-    cache ActionController::Base.helpers.asset_path("home.jpg")
-    cache ActionController::Base.helpers.asset_path("reliance.png")
-    cache ActionController::Base.helpers.asset_path("greenpop.png")
-    cache ActionController::Base.helpers.asset_path("couch1.png")
-    cache ActionController::Base.helpers.asset_path("car1.png")
-    cache ActionController::Base.helpers.asset_path("rails.png")
-    cache ActionController::Base.helpers.asset_path("plane1.png")
-    cache ActionController::Base.helpers.asset_path("tree1.png")
-
     network "/"
   end
   get "/application.manifest" => offline

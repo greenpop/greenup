@@ -179,12 +179,49 @@ textarea {
   transition: 0.3;
 }
 
-.snapscan{
-  background-color: #c6f3c5;
-  color: green;
-  border: thin solid green;
+.close{
+  float: left;
+  margin-right: 5px;
+  position: relative;
+  left: 20px;
+  top: 3px;
+}
+
+.close:hover{
+  opacity:0.8;
+}
+
+.paypal{
+  background-color: #f7933d;
+  color: white;
+  border: thin solid white;
+  padding: 10px;
+  font-size: 18px;
+  width: 230px !important;
+  margin-bottom: 2px;
+  border-radius: 3px;
+}
+
+.box{
+  display: inline-block;
+  border-radius: 5px;
   padding: 5px;
-  font-size: 12px;
+}
+
+.snapimg{
+  height: 300px;
+  position: relative;
+  right: 13px;
+}
+
+.snapscan{
+  background-color: #f7933d;
+  display: inline-block;
+  color: white;
+  border: thin solid white;
+  padding: 10px;
+  font-size: 18px;
+  width: 222px;
   margin-bottom: 2px;
   border-radius: 3px;
 }

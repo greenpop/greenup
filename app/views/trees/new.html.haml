@@ -9,8 +9,11 @@
 			towards tree planting in southern Africa
 		= f.submit("Join the Treevolution now!", class: "button")
 		
-	%p.white.donate
-		%button.snapscan Donate through Snapscan	
-		%p.snapimg
-			= image_tag "snapscanQR.png", class: "snapscan", align: "center"
+	%span.white.donate
+		.button.snapscan Donate through Snapscan	
+		.box
+			= image_tag "snapscanQR.png", class: "snapimg", align: "center"
+			= image_tag "close.png", class: "close"
 
+	%span.white.donate
+		=link_to("Donate through Paypal", new_event_tree_path, class: "button paypal")
