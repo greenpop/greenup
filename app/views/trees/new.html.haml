@@ -5,7 +5,9 @@
 	= form_for @tree, url: event_trees_path(@event) do |f|
 		%p.white.donate 
 			I'll donate R
-			= f.number_field :rand_given, class: "donate_money inline", value: params[:amount] 
+			= f.number_field :rand_given, id: "ZAR", class: "donate_money inline", value: @rand_amount, step: 0.5
+			or USD $
+			= f.number_field :dollar_amount, id: "USD", class: "donate_money inline", value: @dollar_amount, step: 0.01
 			towards tree planting in southern Africa
 		= f.submit("Join the Treevolution now!", class: "button")
 		
@@ -16,4 +18,23 @@
 			= image_tag "close.png", class: "close"
 
 	%span.white.donate
-		=link_to("Donate through Paypal", new_event_tree_path, class: "button paypal")
+		.button.paypal Donate through Paypal
+
+:javascript
+	var conversion = "#{@conversion}";
+	var paypal_url = "#{@paypal_url}";
+
+	$(document).ready(function(){
+		$("#USD").change(function(){
+			var rand = $(this).val()*conversion
+			$("#ZAR").val(rand.toFixed(2));
+		});
+		$("#ZAR").change(function(){
+			var usd = $(this).val()/conversion
+			$("#USD").val(usd.toFixed(2));
+		});
+		$('.paypal').click(function() {
+			amount = $("#USD").val();
+			window.location = 'https://www.sandbox.paypal.com/za/cgi-bin/webscr?amount=' + amount + '&' + paypal_url;
+		});
+	});

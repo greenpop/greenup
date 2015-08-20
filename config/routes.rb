@@ -19,12 +19,12 @@ Rails.application.routes.draw do
 
 
   #things to cache for offline version
-  offline = Rack::Offline.configure  do 
-    cache ActionController::Base.helpers.asset_path("application.css")
-    cache ActionController::Base.helpers.asset_path("application.js")
-    network "/"
-  end
-  get "/application.manifest" => offline
+  # offline = Rack::Offline.configure  do 
+  #   cache ActionController::Base.helpers.asset_path("application.css")
+  #   cache ActionController::Base.helpers.asset_path("application.js")
+  #   network "/"
+  # end
+  # get "/application.manifest" => offline
  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

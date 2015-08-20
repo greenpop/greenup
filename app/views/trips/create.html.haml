@@ -3,12 +3,14 @@
 	#container.grey
 		#money-message
 			According to our calculations, you could GreenUp the 
-			= @trip.carbon
-			kg of carbon emitted during your travels by contributing
-			#money-amount= Price.new(@money_amount).to_s
+			#money-amount= @trip.carbon.to_s + "kg of carbon"
+			emitted during your travels by contributing
+			#money-amount= Price.new(@money_amount).to_s 
+			or
+			#money-amount= @dollar_amount
 			towards green projects.
 	
 		.row
 			.btn-group
-				=link_to("Contribute toward planting trees", new_event_tree_path(@event, amount: @money_amount), class: "button small")
+				=link_to("Contribute toward planting trees", new_event_tree_path(@event, rand_amount: @money_amount, conversion: @conversion_rate, dollar_amount: (@money_amount/@conversion_rate).round(2)), class: "button small")
 				=link_to("Create a personal green pledge", new_event_pledge_path(@event), class: "button small")
