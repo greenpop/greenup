@@ -2,16 +2,21 @@ $(function() {
 	$('.box').hide();
 	$(".snapimg").hide();
 	$('.close').hide();
-	$('.snapscan').click(function(){
+	$('#submit').hide();
+	$('#snap').click(function(){
 		$('.snapimg').fadeIn('slow')
 		$('.close').fadeIn('slow')
 		$('.box').fadeIn('slow')
+		$('#submit').fadeIn('slow')
 		$(this).hide()
+		$('.paypal').hide()
 	});
 	$('.close').click(function() {
 		$(this).hide()
 		$('.snapimg').hide()
 		$('.box').hide()
-		$('.snapscan').fadeIn('slow')
+		$('#submit').hide()
+		$('#snap').fadeIn('slow')
+		$('.paypal').fadeIn('slow')
 	});
 });

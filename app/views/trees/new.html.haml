@@ -7,18 +7,23 @@
 			I'll donate R
 			= f.number_field :rand_given, id: "ZAR", class: "donate_money inline", value: @rand_amount, step: 0.5
 			or USD $
-			= f.number_field :dollar_amount, id: "USD", class: "donate_money inline", value: @dollar_amount, step: 0.01
+			= f.number_field :dollar_amount, id: "USD", class: "donate_money inline", value: @dollar_amount, step: 0.5
 			towards tree planting in southern Africa
-		= f.submit("Join the Treevolution now!", class: "button")
+		%span.white.donate
+			= f.submit("I have paid through Snapscan", class: "button snapscan", id: "submit")
+		%span.white.donate
+			= f.submit("Donate through Paypal", class: "button paypal")
 		
-	%span.white.donate
-		.button.snapscan Donate through Snapscan	
-		.box
-			= image_tag "snapscanQR.png", class: "snapimg", align: "center"
-			= image_tag "close.png", class: "close"
+		%span.white.donate
+			.button.snapscan#snap
+				Donate through Snapscan	
+			.box
+				= image_tag "snapscanQR.png", class: "snapimg", align: "center"
+				= image_tag "close.png", class: "close"
 
-	%span.white.donate
-		.button.paypal Donate through Paypal
+	%br
+	%p
+		= link_to("Create a Personal Green Pledge Instead", new_event_pledge_path(@event), class: "small-txt")
 
 :javascript
 	var conversion = "#{@conversion}";
@@ -33,8 +38,9 @@
 			var usd = $(this).val()/conversion
 			$("#USD").val(usd.toFixed(2));
 		});
-		$('.paypal').click(function() {
+		$('.paypal').click(function(e) {
+			e.preventDefault();
 			amount = $("#USD").val();
-			window.location = 'https://www.sandbox.paypal.com/za/cgi-bin/webscr?amount=' + amount + '&' + paypal_url;
+			window.location = 'https://www.paypal.com/za/cgi-bin/webscr?amount=' + amount + '&' + paypal_url;
 		});
 	});

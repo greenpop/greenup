@@ -27706,3 +27706,5 @@ Processing by TreesController#new as HTML
   Rendered events/_background.html.haml (0.4ms)
   Rendered trees/new.html.haml within layouts/application (7.4ms)
 Completed 200 OK in 288ms (Views: 286.3ms | ActiveRecord: 0.3ms)
+  [1m[36mTree Load (1.1ms)[0m  [1mSELECT "trees".* FROM "trees"[0m
+  [1m[35mTree Load (0.7ms)[0m  SELECT "trees".* FROM "trees"

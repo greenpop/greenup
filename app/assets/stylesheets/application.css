@@ -197,10 +197,29 @@ textarea {
   color: white;
   border: thin solid white;
   padding: 10px;
-  font-size: 18px;
-  width: 222px;
+  font-size: 24px;
+  width: 288px;
   margin-bottom: 2px;
   border-radius: 3px;
+}
+
+.small-txt{
+  color: white;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.small-txt:hover{
+  color: gray;
+}
+
+#submit{
+  width: 330px;
+}
+
+.paypal:hover{
+  background-color: #f7b33d;
+  color: white !important;
 }
 
 .box{
@@ -221,10 +240,15 @@ textarea {
   color: white;
   border: thin solid white;
   padding: 10px;
-  font-size: 18px;
-  width: 222px;
+  font-size: 24px;
+  width: 288px;
   margin-bottom: 2px;
   border-radius: 3px;
+}
+
+.snapscan:hover{
+  background-color: #f7b33d;
+  color: white !important;
 }
 
 .bg-img {
