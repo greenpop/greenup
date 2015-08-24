@@ -46,6 +46,7 @@ gem 'rails_12factor', group: :production
 #SendGrid for emails
 gem 'sendgrid'
 
+#for api's getting json parsing
 gem 'rest-client'
 
 # Use ActiveModel has_secure_password

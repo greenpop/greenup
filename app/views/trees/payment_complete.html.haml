@@ -1,0 +1,10 @@
+= render 'events/background'
+#container.grey
+	%h1.green Thank you for joining the Treevolution!
+
+	%p.white.donate 
+		Thank you for your payment! Your transaction has been completed and a receipt for your purchase has been emailed to you. You've contributing to planting trees in southern Africa!
+	%br
+	%br
+		
+	= link_to("Continue...", event_path(@event), class: "button")

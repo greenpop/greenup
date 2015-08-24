@@ -17,6 +17,7 @@ Rails.application.routes.draw do
 
   resources :events, only: [:index, :show]
 
+  get 'trees/purchase/:event_id' => 'trees#payment_complete', as: :payment
 
   #things to cache for offline version
   # offline = Rack::Offline.configure  do 
