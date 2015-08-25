@@ -1,17 +1,15 @@
 class UserMailer < ActionMailer::Base
   include SendGrid
-  default from: "from@example.com"
+  default from: "info@greenpop.org"
 
   def tree_email(user, tree, event)
   	@user = user
-  	@tree = tree
   	@event = event
   	mail(to: @user.email, subject: "Thank you for using the GreenUp Travel App!")
   end
 
   def pledge_email(user, pledge, event)
   	@user = user
-  	@pledge = pledge
   	@event = event
   	mail(to: @user.email, subject: "Thank you for using the GreenUp Travel App!")
   end

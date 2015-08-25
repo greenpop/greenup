@@ -13,7 +13,6 @@
  * file per style scope.
  *
  *= require_tree .
- *= require nav_bar
  *= require_self
  */
 
