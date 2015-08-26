@@ -12,12 +12,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap/glyphicons
  *= require_tree .
  *= require nav_bar
  *= require_self
  */
 
-@import'bootstrap/glyphicons'
 /*Color*/
 .green{color:#96D437;}
 
@@ -43,8 +43,14 @@
 	opacity: .90;
 }
 
+i{
+  margin-right: 10px;
+  position: relative;
+  top: 2px;
+}
+
 h1 {
-	font-family: 'Kameron', serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 44px;
 	margin: 0;
 }
@@ -124,7 +130,7 @@ textarea {
 }
 
 .btn-link {
-  font-family: 'Helvetica';
+  font-family: "Roboto", sans-serif;
   font-size: 32px;
   font-weight: 800;
   cursor: pointer;
