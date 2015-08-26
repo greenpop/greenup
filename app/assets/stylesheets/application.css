@@ -13,9 +13,11 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require nav_bar
  *= require_self
  */
 
+@import'bootstrap/glyphicons'
 /*Color*/
 .green{color:#96D437;}
 
