@@ -3,8 +3,9 @@
 #indexcontainer
   #green-wrapper
     %h1.white Hi there!
-    %p.white WELCOME TO THIS FUN 5-MINUTE CALCULATOR
-    %p.white AIMED AT INSPIRING US ALL TO LIVE A LITTLE GREENER
+    %p.white WELCOME TO THIS FUN 5-MINUTE
+    %p.white CALCULATOR AIMED AT INSPIRING US ALL 
+    %p.white TO LIVE A LITTLE GREENER
     %ul
       = form_tag events_path, method: 'get' do
         = collection_select(:event, :name, Event.order(:id), :id, :name, {:prompt => "Select an Event", :multiple => true }, {:class => "dropdown"})

@@ -159,7 +159,7 @@ textarea {
 }
 
 .button {
-	font-family: 'Kameron', serif;
+	font-family: "Roboto", sans-serif;
 	font-size: 32px;
   font-weight: 800;
 	cursor: pointer;
@@ -205,7 +205,7 @@ textarea {
   color: white;
   border: thin solid white;
   padding: 10px;
-  font-size: 24px;
+  font-size: 20px;
   width: 288px;
   margin-bottom: 2px;
   border-radius: 3px;
@@ -248,7 +248,7 @@ textarea {
   color: white;
   border: thin solid white;
   padding: 10px;
-  font-size: 24px;
+  font-size: 20px;
   width: 288px;
   margin-bottom: 2px;
   border-radius: 3px;
@@ -324,7 +324,7 @@ textarea {
   list-style-type: none;
   padding: 10px;
   position: relative;
-  width: 200px;
+  width: 450px;
   margin: 0 auto;
   padding: 10px;
   background: #fff;

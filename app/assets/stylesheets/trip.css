@@ -5,7 +5,7 @@ label {
 }
 
 .notice {
-	font-family: 'Arvo', serif;
+	font-family: 'Roboto', serif;
 	font-size: 40px;
 }
 
@@ -54,7 +54,7 @@ select {
   list-style-type: none;
   padding: 10px;
   position: relative;
-  width: 150px;
+  width: 235px;
   margin: 0 auto;
   padding: 10px;
   background: #fff;
