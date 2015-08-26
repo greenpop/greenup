@@ -52,6 +52,7 @@ gem 'rest-client'
 #glyphicons
 gem 'bootstrap-glyphicons'
 
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
