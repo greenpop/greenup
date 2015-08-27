@@ -366,3 +366,10 @@ textarea {
   font-weight: bold;
   color: #000;
 }
+
+@media (min-width: 1000px) {
+  .plant{
+    display: block;
+    margin-bottom: 35px;
+  }
+}
