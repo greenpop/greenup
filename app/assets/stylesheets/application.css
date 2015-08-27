@@ -366,11 +366,3 @@ textarea {
   font-weight: bold;
   color: #000;
 }
-
-@media (min-width: 1000px) {
-  .button{
-    display: block;
-    margin: 10px auto 35px auto;
-    width: 400px;
-  }
-}
