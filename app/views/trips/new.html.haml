@@ -1,5 +1,7 @@
 = render 'events/background'
 #container.grey
+	=link_to "Back", new_event_user_path, class: "button back"
+
 	%h1.white Hello #{@user.name}, the Treemendous Traveller! 
 	%h2.white Please describe your journey to #{@event.name}
 

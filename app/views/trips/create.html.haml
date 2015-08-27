@@ -1,6 +1,7 @@
 = render 'events/background'
 .container
 	#container.grey
+		=link_to "Back", new_event_trip_path, class: "button back"
 		#money-message
 			According to our calculations, you could GreenUp the 
 			#money-amount= @trip.carbon.to_s + "kg of carbon"

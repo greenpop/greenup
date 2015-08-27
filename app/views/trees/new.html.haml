@@ -8,18 +8,20 @@
 			= f.number_field :rand_given, id: "ZAR", class: "donate_money inline", value: @rand_amount, step: 0.5
 			or USD $
 			= f.number_field :dollar_amount, id: "USD", class: "donate_money inline", value: @dollar_amount, step: 0.5
-			towards tree planting in southern Africa
+			towards tree planting in Southern Africa
 		%span.white.donate
 			= f.submit("I have paid through Snapscan", class: "button snapscan", id: "submit")
-		%span.white.donate
-			= f.submit("Donate through Paypal", class: "button paypal")
 		
 		%span.white.donate
 			.button.snapscan#snap
-				Donate through Snapscan	
+				Donate via Snapscan	
 			.box
 				= image_tag "snapscanQR.png", class: "snapimg", align: "center"
 				= image_tag "close.png", class: "close"
+		%span.white.donate
+			= f.submit("Donate via card or Paypal", class: "button paypal")
+		%span.white.donate
+			= f.submit("Pay in cash at the event", class: "button cash")
 
 	%br
 	%p
