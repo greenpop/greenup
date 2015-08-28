@@ -1,6 +1,6 @@
 ActiveAdmin.register Event do
 
-  permit_params :name, :about, :start_date, :end_date, :background
+  permit_params :name, :about, :start_date, :end_date, :background, :contribution
 
 # new event form /admin/events/new
 # & edit event form /admin/events/:event_id/edit
@@ -10,6 +10,7 @@ ActiveAdmin.register Event do
       f.input :about
       f.input :start_date
       f.input :end_date
+      f.input :contribution, as: :radio, collection: ['Only Greenpop', 'Generic']
       f.input :background, :as => :file
       # Will preview the image when the object is edited
     end
