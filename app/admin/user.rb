@@ -110,7 +110,7 @@ ActiveAdmin.register User do
   #   end
   # end
 
-  csv do
+  csv force_quotes: true, col_sep: ';' do
     total_carbon = []
     total_donation = []
     total_car_carbon = []
