@@ -40,9 +40,8 @@
 			var usd = $(this).val()/conversion
 			$("#USD").val(usd.toFixed(2));
 		});
-		$('.paypal').click(function(e) {
-			e.preventDefault();
+		$('.paypal').click(function() {
 			amount = $("#USD").val();
-			window.location = 'https://www.paypal.com/za/cgi-bin/webscr?amount=' + amount + '&' + paypal_url;
+			window.open('https://www.paypal.com/za/cgi-bin/webscr?amount=' + amount + '&' + paypal_url);
 		});
 	});

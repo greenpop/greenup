@@ -10,7 +10,8 @@ class TreesController < ApplicationController
     @rand_amount = params[:rand_amount]
     @conversion = params[:conversion]
     @dollar_amount = params[:dollar_amount]
-    @paypal_url = paypal_url(payment_path(params[:event_id]), @tree.id)
+    @event = Event.find(params[:event_id])
+    @paypal_url = paypal_url(@event.name, @tree.id)
   end
 
   def create
@@ -32,14 +33,13 @@ class TreesController < ApplicationController
     @event = Event.find(params[:event_id])
   end
 
-  def paypal_url(return_url, id)
+  def paypal_url(event, id)
     values = {
       business: 'jeremy@greenpop.org',
       cmd: '_xclick',
       upload: 1,
-      return: return_url,
       invoice: id,
-      item_name: 'Donating Trees to Greenpop',
+      item_name: 'Donation to Greening Projects at ' + event,
     }   
     values.to_query
   end
