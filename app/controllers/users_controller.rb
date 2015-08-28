@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       @user = User.create(user_params)
     end
     session[:user_id] = @user.id
-    @user.event_id = @event.id
+    @user.events << @event.id
     @user.save
     redirect_to new_event_trip_path
   end

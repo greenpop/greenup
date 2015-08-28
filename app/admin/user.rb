@@ -162,11 +162,11 @@ ActiveAdmin.register User do
     end
 
     #NOTE this prints a running total.  is there a "div" equivalent in csv? 
-    column "Total Carbon" do |user|
+    column "Running Total Carbon" do |user|
       total_carbon.compact.sum.to_s
     end
 
-    column "Total Donation" do |user|
+    column "Running Total Donation" do |user|
       total_donation.compact.sum.to_s 
     end
 
