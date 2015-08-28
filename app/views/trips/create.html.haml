@@ -3,12 +3,20 @@
 	#container.grey
 		=link_to "Back", new_event_trip_path, class: "button back"
 		#money-message
-			According to our calculations, you could GreenUp the 
-			#money-amount= @trip.carbon.to_s + "kg of carbon"
+			According to our calculations, you could GreenUp the
+			- if @trip.carbon == 0
+				#money-amount= "small amount of carbon"
+			- else 
+				#money-amount= @trip.carbon.to_s + "kg of carbon"
 			emitted during your travels by contributing
-			#money-amount= Price.new(@money_amount).to_s 
-			or
-			#money-amount= @dollar_amount
+			
+			- if @money_amount == 0
+				- @money_amount = 1
+				#money-amount= "R1"
+			- else
+				#money-amount= Price.new(@money_amount).to_s 
+				or
+				#money-amount= @dollar_amount
 			towards green projects.
 	
 		.row
