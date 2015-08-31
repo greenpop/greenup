@@ -3,7 +3,7 @@ ActiveAdmin.register User do
 
   filter :name_or_surname_cont, label: 'Name / Surname'
   filter :email
-  filter :event, collection: -> {Event.all}, label: 'Events'
+  filter :events, collection: -> {Event.all}, label: 'Events'
   
   # See permitted parameters documentation:
   # https://github.com/gregbell/active_admin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
@@ -46,34 +46,36 @@ ActiveAdmin.register User do
       user.trips.collect(&:km_travelled).join(', ')
     end
 
-    column "Event", :sortable do |user|
-      events = []
-      user.trips.each do |trip|
-        events << Event.find(trip.event_id)
-      end
-      events.collect(&:name).join(', ')
-
-      # user.trips[0].event.name
+    column "Events", :sortable do |user|
+      user.events.collect(&:name).join(', ')
     end
 
     column "Car CO" do |user|
-      total_car_carbon << user.trips[0][:car_carbon]
-      user.trips.collect(&:car_carbon).join(', ')
+      if user.trips != nil
+        total_car_carbon << user.trips[0][:car_carbon]
+        user.trips.collect(&:car_carbon).join(', ')
+      end
     end
 
     column "Plane CO" do |user|
-      total_flight_carbon << user.trips[0][:flight_carbon]
-      user.trips.collect(&:flight_carbon).join(', ')
+      if user.trips != nil
+        total_flight_carbon << user.trips[0][:flight_carbon]
+        user.trips.collect(&:flight_carbon).join(', ')
+      end
     end
 
     column "Train CO" do |user|
-      total_train_carbon << user.trips[0][:train_carbon]
-      user.trips.collect(&:train_carbon).join(', ')
+      if user.trips != nil
+        total_train_carbon << user.trips[0][:train_carbon]
+        user.trips.collect(&:train_carbon).join(', ')
+      end
     end
 
     column "Bus CO" do |user|
-      total_bus_carbon << user.trips[0][:bus_carbon]
-      user.trips.collect(&:bus_carbon).join(', ')
+      if user.trips != nil
+        total_bus_carbon << user.trips[0][:bus_carbon]
+        user.trips.collect(&:bus_carbon).join(', ')
+      end
     end
 
     column "Total Carbon (kg)" do |user|
