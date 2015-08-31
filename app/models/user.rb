@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
 	has_many :trips
 	has_many :trees
 	has_many :pledges
-  has_and_belongs_to_many :event#, :class_name => 'Event'
+  has_and_belongs_to_many :events#, :class_name => 'Event'
 
   def total(carbon_or_km)
     self.trips.pluck(carbon_or_km).inject{ |sum,x| sum + x }
