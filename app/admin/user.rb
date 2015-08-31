@@ -51,28 +51,28 @@ ActiveAdmin.register User do
     end
 
     column "Car CO" do |user|
-      if user.trips != nil
+      if user.trips[0] != nil
         total_car_carbon << user.trips[0][:car_carbon]
         user.trips.collect(&:car_carbon).join(', ')
       end
     end
 
     column "Plane CO" do |user|
-      if user.trips != nil
+      if user.trips[0] != nil
         total_flight_carbon << user.trips[0][:flight_carbon]
         user.trips.collect(&:flight_carbon).join(', ')
       end
     end
 
     column "Train CO" do |user|
-      if user.trips != nil
+      if user.trips[0] != nil
         total_train_carbon << user.trips[0][:train_carbon]
         user.trips.collect(&:train_carbon).join(', ')
       end
     end
 
     column "Bus CO" do |user|
-      if user.trips != nil
+      if user.trips[0] != nil
         total_bus_carbon << user.trips[0][:bus_carbon]
         user.trips.collect(&:bus_carbon).join(', ')
       end
