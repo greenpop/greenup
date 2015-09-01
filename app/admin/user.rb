@@ -37,59 +37,28 @@ ActiveAdmin.register User do
     column :surname
     column :email
 
-    column "Distance Travelled (km)" do |user|
-      user.trips.each do |trip|
-        if trip.event ==  :event
-          total_distance << trip.km_travelled
-        end
+    column "Sessions" do |user|
+      table_for user.sessions do |session|
+        column :event_name
+        column :km_travelled
+        column :total_carbon
+        column :car_carbon
+        column :bus_carbon
+        column :plane_carbon
+        column :train_carbon
+        column :rand_given
+        column :dollar_amount
+        column :pledge
       end
-      user.trips.collect(&:km_travelled).join(', ')
-    end
-
-    column "Events", :sortable do |user|
-      user.events.collect(&:name).join(', ')
-    end
-
-    column "Car CO" do |user|
-      if user.trips[0] != nil
-        total_car_carbon << user.trips[0][:car_carbon]
-        user.trips.collect(&:car_carbon).join(', ')
+      user.sessions.each do |session|
+        total_distance << session.km_travelled
+        total_car_carbon << session.car_carbon
+        total_flight_carbon << session.plane_carbon
+        total_train_carbon << session.train_carbon
+        total_bus_carbon << session.bus_carbon
+        total_carbon << session.total_carbon
+        total_donation << session.rand_given
       end
-    end
-
-    column "Plane CO" do |user|
-      if user.trips[0] != nil
-        total_flight_carbon << user.trips[0][:flight_carbon]
-        user.trips.collect(&:flight_carbon).join(', ')
-      end
-    end
-
-    column "Train CO" do |user|
-      if user.trips[0] != nil
-        total_train_carbon << user.trips[0][:train_carbon]
-        user.trips.collect(&:train_carbon).join(', ')
-      end
-    end
-
-    column "Bus CO" do |user|
-      if user.trips[0] != nil
-        total_bus_carbon << user.trips[0][:bus_carbon]
-        user.trips.collect(&:bus_carbon).join(', ')
-      end
-    end
-
-    column "Total Carbon (kg)" do |user|
-      total_carbon << user.total(:carbon)
-      user.total(:carbon)
-    end
-
-    column "Donation (ZAR)" do |user|
-      total_donation << user.total_donation
-      user.total_donation
-    end
-
-    column "Pledges" do |user|
-      user.pledges_summary
     end
 
     div :class => "Row" do |user| 
@@ -126,37 +95,50 @@ ActiveAdmin.register User do
     column :email
 
     column "Distance Travelled (km)" do |user|
-      user.total(:km_travelled)
+      user.trips.each do |trip|
+        if trip.event ==  :event
+          total_distance << trip.km_travelled
+        end
+      end
+      user.trips.collect(&:km_travelled).join(', ')
     end
 
     column "Event" do |user|
-      user.trips[0].event.name
+      user.events.collect(&:name).join(', ')
     end
 
     column "Car CO" do |user|
-      user.trips[0][:car_carbon]
+      if user.trips[0] != nil
+        user.trips.collect(&:car_carbon).join(', ')
+      end
     end
 
     column "Plane CO" do |user|
-      user.trips[0][:flight_carbon]  
+      if user.trips[0] != nil
+        user.trips.collect(&:flight_carbon).join(', ')  
+      end
     end
 
     column "Train CO" do |user|
-      user.trips[0][:train_carbon]
+      if user.trips[0] != nil
+        user.trips.collect(&:train_carbon).join(', ')
+      end
     end
 
     column "Bus CO" do |user|
-      user.trips[0][:bus_carbon]
+      if user.trips[0] != nil
+        user.trips.collect(&:bus_carbon).join(', ')
+      end
     end
 
     column "Carbon (kg)" do |user|
       total_carbon << user.total(:carbon)
-      user.total(:carbon)
+      user.trips.collect(&:carbon).join(', ')
     end
 
     column "Donation (ZAR)" do |user|
       total_donation << user.total_donation
-      user.total_donation
+      user.trees.collect(&:rand_given).join(', ')
     end
 
     column "Pledges" do |user|

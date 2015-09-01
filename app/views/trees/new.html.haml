@@ -5,10 +5,11 @@
 	= form_for @tree, url: event_trees_path(@event) do |f|
 		%p.white.donate 
 			I'll donate R
-			= f.number_field :rand_given, id: "ZAR", class: "donate_money inline", value: @rand_amount, step: 0.5
+			= f.number_field :rand_given, id: "ZAR", class: "donate_money inline", value: @rand_amount, step: 0.01
 			or USD $
-			= f.number_field :dollar_amount, id: "USD", class: "donate_money inline", value: @dollar_amount, step: 0.5
+			= f.number_field :dollar_amount, id: "USD", class: "donate_money inline", value: @dollar_amount, step: 0.01
 			towards tree planting in Southern Africa
+			= f.hidden_field :session_id, value: @session.id
 		%span.white.donate
 			= f.submit("I have paid through Snapscan", class: "button snapscan", id: "submit")
 		

@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
 	has_many :trees
 	has_many :pledges
   has_and_belongs_to_many :events
+  has_many :sessions
 
   #, :class_name => 'Event'
 

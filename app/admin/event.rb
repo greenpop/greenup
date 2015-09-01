@@ -29,6 +29,7 @@ ActiveAdmin.register Event do
       end
       # Will display the image on show object page
     end
+
   end
 
 # event index (/admin/events)

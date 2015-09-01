@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  event_name: MyString
+  user_id: 1
+  km_travelled: 1
+  car_carbon: 1
+  bus_carbon: 1
+  plane_carbon: 1
+  train_carbon: 1
+  total_carbon: 1
+  rand_given: 1.5
+  dollar_amount: 1.5
+  pledge: MyString
+
+two:
+  event_name: MyString
+  user_id: 1
+  km_travelled: 1
+  car_carbon: 1
+  bus_carbon: 1
+  plane_carbon: 1
+  train_carbon: 1
+  total_carbon: 1
+  rand_given: 1.5
+  dollar_amount: 1.5
+  pledge: MyString

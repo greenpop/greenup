@@ -12,6 +12,8 @@ class TreesController < ApplicationController
     @dollar_amount = params[:dollar_amount]
     @event = Event.find(params[:event_id])
     @paypal_url = paypal_url(@event.name, @tree.id)
+
+    @session = Session.find(params[:session])
   end
 
   def create
@@ -20,13 +22,20 @@ class TreesController < ApplicationController
     @user = User.find(@tree.user_id)
     @event = Event.find(@tree.event_id)
 
+    @param_tree = params[:tree]
+    @session = Session.find(@param_tree["session_id"])
+    @session.rand_given = @tree.rand_given
+    @session.dollar_amount = @tree.dollar_amount
+    @session.email = @user.email
+    @session.save
+
     UserMailer.tree_email(@user, @tree, @event).deliver
     redirect_to @event, notice: "Thank you for your contribution. You're tree-mendous!"
   end
 
   private
   def tree_params
-  	params.require(:tree).permit(:rand_given)
+  	params.require(:tree).permit(:rand_given, :dollar_amount)
   end
 
   def set_event

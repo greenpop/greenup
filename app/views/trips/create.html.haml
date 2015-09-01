@@ -20,5 +20,5 @@
 			towards green projects.
 	
 		.row
-			=link_to("Contribute Toward Planting Trees", new_event_tree_path(@event, rand_amount: @money_amount, conversion: @conversion_rate, dollar_amount: (@money_amount/@conversion_rate).round(2)), class: "button small", style: "display: block; width: 325px; margin: 0 auto 30px auto")
-			=link_to("Create a Personal Green Pledge", new_event_pledge_path(@event), class: "button small", style: "display: block; width: 325px; margin: 0 auto 30px auto")
+			=link_to("Contribute Toward Planting Trees", new_event_tree_path(@event, rand_amount: @money_amount, conversion: @conversion_rate, dollar_amount: (@money_amount/@conversion_rate).round(2), session: @session.id), class: "button small", style: "display: block; width: 325px; margin: 0 auto 30px auto")
+			=link_to("Create a Personal Green Pledge", new_event_pledge_path(@event, session:@session.id), class: "button small", style: "display: block; width: 325px; margin: 0 auto 30px auto")
