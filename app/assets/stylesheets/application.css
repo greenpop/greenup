@@ -320,7 +320,8 @@ textarea {
   width: 100px;
   font-size: 20px;
   padding: 5px;
-  display: block;
+  display: inline;
+  float: left;
 }
 
 .train .tip {
