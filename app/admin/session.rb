@@ -10,7 +10,12 @@ ActiveAdmin.register Session do
 	    total_train_carbon = []
 	    total_distance = []
 
-		column "User Email", :email
+		column "Signed Up", sortable: :first_session do |u|
+            u.first_session.strftime("%B %e, %Y, %H:%M")
+        end
+        column "Name of User", :name
+        column "Surname of User", :surname
+        column "User Email", :email
 		column :event_name
         column "Distance Travelled" do |session|
         	total_distance << session.km_travelled
@@ -79,7 +84,12 @@ ActiveAdmin.register Session do
 	    total_train_carbon = []
 	    total_distance = []
 
-		column :email
+        column "Signed Up", sortable: :first_session do |u|
+            u.first_session.strftime("%B %e, %Y, %H:%M")
+        end
+		column :name
+        column :surname
+        column :email
 		column :event_name
         column "Distance Travelled" do |session|
         	total_distance << session.km_travelled
@@ -120,7 +130,7 @@ ActiveAdmin.register Session do
 	      total_donation.compact.sum.to_s 
 	    end
 	    column "Running Total Distance Travelled" do |user|
-	      total_donation.compact.sum.to_s 
+	      total_distance.compact.sum.to_s 
 	    end
 	end
 end

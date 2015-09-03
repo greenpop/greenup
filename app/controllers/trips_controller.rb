@@ -22,6 +22,10 @@ class TripsController < ApplicationController
     @session.bus_carbon = @trip.bus_carbon
     @session.train_carbon = @trip.train_carbon
     @session.km_travelled = @trip.km_travelled
+    @session.email = @user.email
+    @session.name = @user.name
+    @session.surname = @user.surname
+    @session.first_session = @user.created_at
     @session.save
   end
 

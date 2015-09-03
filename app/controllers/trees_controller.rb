@@ -26,7 +26,6 @@ class TreesController < ApplicationController
     @session = Session.find(@param_tree["session_id"])
     @session.rand_given = @tree.rand_given
     @session.dollar_amount = @tree.dollar_amount
-    @session.email = @user.email
     @session.save
 
     UserMailer.tree_email(@user, @tree, @event).deliver
