@@ -2,8 +2,8 @@
 <head>
 </head>
 <body>
-	<div style="background-color:#96D437; color: #323533; width: 90%; margin: 0 auto;padding: 20px;font-family: Gotham;">
-		<img src = "http://i.imgur.com/kaEm7v7.jpg", style= "width: 100%; border-radius: 10px" >
+	<div style="background-color:#96D437; color: #323533; width: 90%; margin: 0 auto;padding: 20px;font-family: Helvetica;">
+		<img src = "http://greenup.herokuapp.com/assets/home-15f574ac1f133f6478fa773a2cb0745a.jpg", style= "width: 100%; border-radius: 10px" >
 		<h1 style = "font-size: 45px">Dear Eco-Warrior,</h1>
 		<p style = "font-size: 20px; color:#323533">Thanks for using the Carbon Calculator App to learn more about the carbon footprint of your travel to <%= @event.name %>! You made a pledge to: <%= @pledge.about %>.</p>
 		<% if @event.contribution == "Generic" %>
@@ -12,26 +12,29 @@
 			<p style = "font-size: 20px; color:#323533">We think its really important to keep learning about our environmental impact so we can get active (not anxious) about the future of our planet. Join us as we plant trees and have fun doing it!</p>
 		<% end %>
 	</div>
-	<div style="    background-color: #323533;
+	<div style="    background-color: white;
     padding: 20px;
     width: 90%;
     margin: 0 auto;
-    color: white;
-    font-family: Gotham;">
-    	<a href = "http://www.greenpop.org"><img style="width: 20%; display:inline" src="http://www.another-day.co.za/wp-content/uploads/2014/03/Greenpop-logo-long--750x256.jpg"></img></a>
-		<h1 style = "display: inline-block">Come join the Treevolution! Here's how:</h1>
-		<ul style="font-size: 20px; line-height: 37px; color: white;">
-			<li style = "color: white;">Become an Active Citizen and <a href = "http://www.greenpop.org/newsletter-sign-up/" style = "color:white">sign up</a> for our e-newsletter chock full of green news, tools, events and activities. </li>
-			<li style = "color: white;">Sponsor a tree <a href = "http://www.quicket.co.za/organisers/1469-greenpop-tree-campaigns" style="color:white">here!</a></li>
-			<li style = "color: white;">Follow us on social media:
+    color: #323533;
+    font-family: Helvetica;">
+    	<a href = "http://www.greenpop.org"><img style="width: 25%; margin-left: 38%", src="http://www.another-day.co.za/wp-content/uploads/2014/03/Greenpop-logo-long--750x256.jpg"></img></a>
+		<h1>Come join the Treevolution! Here's how:</h1>
+		<ul style="font-size: 20px; line-height: 37px; color: #323533;">
+			<li style = "color: #323533;">Become an Active Citizen and <a href = "http://www.greenpop.org/newsletter-sign-up/" style = "color:#323533">sign up</a> for our e-newsletter chock full of green news, tools, events and activities. </li>
+			<li style = "color: #323533;">Sponsor a tree <a href = "http://www.quicket.co.za/organisers/1469-greenpop-tree-campaigns" style="color:#323533">here!</a></li>
+			<li style = "color: #323533;">Follow us on social media:
 				<br>
-				<a style = "text-decoration: none; position:relative;  margin-left: 8px;" href = "http://www.facebook.com/GreenpopTreevolution"><img src="http://www.bostongreenfest.org/images/Facebook-ButtonLeaves.png" style = "width:50px">
-				</a>
-				<a style = "text-decoration: none; position:relative;  margin-left: 8px;" href = "http://twitter.com/greenpopSA"><img src="http://www.bostongreenfest.org/images/twitter-buttonLeaves.png" style = "width:50px"></img>
-				</a>
-				<a style = "text-decoration: none; position:relative; top: 9px; margin-left: 8px;" href = "http://www.youtube.com/user/GreenpopTreevolution"><img src="http://malamahawaii.org/wp-content/themes/blogs-mu/_inc/images/youtube-icon.png" style = "width:50px"></img>
-				</a>
-				<a style = "text-decoration: none; position:relative; top: 5px; margin-left: 8px;" href = "https://instagram.com/greenpopsa/?hl=en"><img src="http://www.bostongreenfest.org/images/instagram-buttonGreen.png" style = "width:50px"></img>
+				<br>
+				<div style = "text-align: center">
+					<a style = "text-decoration: none; position:relative;  margin-left: 8px;" href = "http://www.facebook.com/GreenpopTreevolution"><img src="http://www.bostongreenfest.org/images/Facebook-ButtonLeaves.png" style = "width:50px">
+					</a>
+					<a style = "text-decoration: none; position:relative;  margin-left: 8px;" href = "http://twitter.com/greenpopSA"><img src="http://www.bostongreenfest.org/images/twitter-buttonLeaves.png" style = "width:50px"></img>
+					</a>
+					<a style = "text-decoration: none; position:relative; top: 9px; margin-left: 8px;" href = "http://www.youtube.com/user/GreenpopTreevolution"><img src="http://malamahawaii.org/wp-content/themes/blogs-mu/_inc/images/youtube-icon.png" style = "width:50px"></img>
+					</a>
+					<a style = "text-decoration: none; position:relative; top: 5px; margin-left: 8px;" href = "https://instagram.com/greenpopsa/?hl=en"><img src="http://www.bostongreenfest.org/images/instagram-buttonGreen.png" style = "width:50px"></img>
+				</div>
 			</li>
 		<ul>
 	</div>
