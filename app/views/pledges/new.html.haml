@@ -5,7 +5,7 @@
 	= form_for @pledge, url: event_pledges_path(@event) do |f|
 		%ul
 			%li.white
-				= f.text_area(:about, placeholder: "By #{1.month.from_now.strftime("%B %e, %Y")}, I pledge to plant 3 trees and...")
+				= f.text_area(:about, placeholder: "I pledge to...")
 				= f.hidden_field :session_id, value: @session.id
 			%li
 				= f.submit("I commit!", class: "button")

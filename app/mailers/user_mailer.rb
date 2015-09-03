@@ -5,12 +5,14 @@ class UserMailer < ActionMailer::Base
   def tree_email(user, tree, event)
   	@user = user
   	@event = event
+    @tree = tree
   	mail(to: @user.email, subject: "Thank you for using the GreenUp Travel App!")
   end
 
   def pledge_email(user, pledge, event)
   	@user = user
   	@event = event
+    @pledge = pledge
   	mail(to: @user.email, subject: "Thank you for using the GreenUp Travel App!")
   end
 end
