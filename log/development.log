@@ -1163,3 +1163,101 @@ NoMethodError - undefined method `value' for nil:NilClass:
 
 Started POST "/__better_errors/226c7dcc0b9cc73d/variables" for 127.0.0.1 at 2016-03-16 19:17:22 +0200
   [1m[36mVariable Load (0.1ms)[0m  [1mSELECT "variables".* FROM "variables"[0m
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2016-03-16 19:24:37 +0200
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[35mAdminUser Load (1.4ms)[0m  SELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."id" = 1  ORDER BY "admin_users"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/admin
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-03-16 19:24:37 +0200
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."id" = 1  ORDER BY "admin_users"."id" ASC LIMIT 1[0m
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/page/index.html.arb (104.5ms)
+Completed 200 OK in 109ms (Views: 107.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/events" for 127.0.0.1 at 2016-03-16 19:24:40 +0200
+Processing by Admin::EventsController#index as HTML
+  [1m[35mAdminUser Load (0.3ms)[0m  SELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."id" = 1  ORDER BY "admin_users"."id" ASC LIMIT 1
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events"  LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events"  LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "events"[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events"  LIMIT 30 OFFSET 0) subquery_for_count
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT  "events".* FROM "events"   ORDER BY "events"."id" desc LIMIT 30 OFFSET 0[0m
+  [1m[35mTrip Load (0.4ms)[0m  SELECT "trips".* FROM "trips"
+  [1m[36mPledge Load (0.4ms)[0m  [1mSELECT "pledges".* FROM "pledges"[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/resource/index.html.arb (156.3ms)
+Completed 200 OK in 165ms (Views: 160.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/admin/events/1/edit" for 127.0.0.1 at 2016-03-16 19:24:42 +0200
+Processing by Admin::EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."id" = 1  ORDER BY "admin_users"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = 1 LIMIT 1[0m
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/resource/edit.html.arb (142.0ms)
+Completed 200 OK in 150ms (Views: 144.0ms | ActiveRecord: 4.0ms)
+
+
+Started PATCH "/admin/events/1" for 127.0.0.1 at 2016-03-16 19:24:48 +0200
+Processing by Admin::EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AZ6d1GwDUOOuG8dZ2o/7WjlL2nzNYvnHeRwmKEEL/mo=", "event"=>{"name"=>"Test", "about"=>"", "start_date(1i)"=>"", "start_date(2i)"=>"", "start_date(3i)"=>"", "end_date(1i)"=>"", "end_date(2i)"=>"", "end_date(3i)"=>"", "contribution"=>"Generic", "background"=>#<ActionDispatch::Http::UploadedFile:0x007fc4c34e5428 @tempfile=#<Tempfile:/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/RackMultipart20160316-93260-1j7mtkm>, @original_filename="CTM-Group-resize790 (1).jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[background]\"; filename=\"CTM-Group-resize790 (1).jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Event", "id"=>"1"}
+  [1m[35mAdminUser Load (0.3ms)[0m  SELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."id" = 1  ORDER BY "admin_users"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Unpermitted parameters: utf8, _method, authenticity_token, commit, id
+Command :: file -b --mime '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/926ade3f01035b4d516ea15760a748c920160316-93260-120jaki.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/899ee44864555a898b9281d6fdcbab7e20160316-93260-1o3kh4o.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/899ee44864555a898b9281d6fdcbab7e20160316-93260-1o3kh4o.jpg[0]'
+Command :: convert '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/899ee44864555a898b9281d6fdcbab7e20160316-93260-1o3kh4o.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/899ee44864555a898b9281d6fdcbab7e20160316-93260-1o3kh4o20160316-93260-hv23fz'
+Command :: file -b --mime '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/899ee44864555a898b9281d6fdcbab7e20160316-93260-1o3kh4o20160316-93260-hv23fz'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/899ee44864555a898b9281d6fdcbab7e20160316-93260-1o3kh4o.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/899ee44864555a898b9281d6fdcbab7e20160316-93260-1o3kh4o.jpg[0]'
+Command :: convert '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/899ee44864555a898b9281d6fdcbab7e20160316-93260-1o3kh4o.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/899ee44864555a898b9281d6fdcbab7e20160316-93260-1o3kh4o20160316-93260-13f1dct'
+Command :: file -b --mime '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/899ee44864555a898b9281d6fdcbab7e20160316-93260-1o3kh4o20160316-93260-13f1dct'
+  [1m[35m (0.2ms)[0m  BEGIN
+Command :: file -b --mime '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/926ade3f01035b4d516ea15760a748c920160316-93260-1sbqt0s.jpg'
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "events" SET "background_file_name" = $1, "background_file_size" = $2, "background_updated_at" = $3, "updated_at" = $4 WHERE "events"."id" = 1[0m  [["background_file_name", "CTM-Group-resize790_(1).jpg"], ["background_file_size", 145256], ["background_updated_at", "2016-03-16 17:24:48.399000"], ["updated_at", "2016-03-16 17:24:48.569988"]]
+[paperclip] deleting /Users/JoshBroomberg/projects/greenup/public/system/events/backgrounds/000/000/001/original/CTM-Group-resize790.jpg
+[paperclip] deleting /Users/JoshBroomberg/projects/greenup/public/system/events/backgrounds/000/000/001/medium/CTM-Group-resize790.jpg
+[paperclip] deleting /Users/JoshBroomberg/projects/greenup/public/system/events/backgrounds/000/000/001/thumb/CTM-Group-resize790.jpg
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin/events/1
+Completed 302 Found in 249ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/admin/events/1" for 127.0.0.1 at 2016-03-16 19:24:48 +0200
+Processing by Admin::EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."id" = 1  ORDER BY "admin_users"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/resource/show.html.arb (126.9ms)
+Completed 200 OK in 137ms (Views: 134.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-16 19:24:52 +0200
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"   ORDER BY "events"."id" ASC[0m
+  Rendered events/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 162ms (Views: 161.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-16 19:24:52 +0200
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"   ORDER BY "events"."id" ASC
+  Rendered events/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 159ms (Views: 158.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 19:24:54 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (1.2ms)
+  Rendered users/new.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 157ms (Views: 156.0ms | ActiveRecord: 0.2ms)
