@@ -1,0 +1,539 @@
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-16 15:25:28 +0200
+
+ActiveRecord::NoDatabaseError - FATAL:  database "bao_dev" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database:
+  activerecord (4.1.9) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.9) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.9) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.9) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+   () Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+   () Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.9) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.9) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.9) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.9) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+   () Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+   () Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+
+Started POST "/__better_errors/087cf206b8906904/variables" for 127.0.0.1 at 2016-03-16 15:25:28 +0200
+
+NameError (wrong local variable name `#$!' for #<Binding:0x007fb02adadf90>):
+  better_errors (2.1.1) lib/better_errors/stack_frame.rb:73:in `local_variable_get'
+  better_errors (2.1.1) lib/better_errors/stack_frame.rb:73:in `block in local_variables'
+  better_errors (2.1.1) lib/better_errors/stack_frame.rb:71:in `each'
+  better_errors (2.1.1) lib/better_errors/stack_frame.rb:71:in `each_with_object'
+  better_errors (2.1.1) lib/better_errors/stack_frame.rb:71:in `local_variables'
+  (erubis:52:in `render'
+  erubis (2.7.0) lib/erubis/evaluator.rb:65:in `eval'
+  erubis (2.7.0) lib/erubis/evaluator.rb:65:in `result'
+  better_errors (2.1.1) lib/better_errors/error_page.rb:30:in `render'
+  better_errors (2.1.1) lib/better_errors/error_page.rb:37:in `do_variables'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:132:in `internal_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:75:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (51.1ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2016-03-16 15:25:28 +0200
+
+ActiveRecord::NoDatabaseError - FATAL:  database "bao_dev" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database:
+  activerecord (4.1.9) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.9) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.9) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.9) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+   () Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+   () Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.9) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.9) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.9) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.9) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.9) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.9) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.9) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (2.1.1) lib/better_errors/middleware.rb:57:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+   () Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+   () Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+   () Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20140711200922)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (4.3ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "email" character varying(255), "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140711200922"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTrips (20140711200930)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "trips" ("id" serial primary key, "user_id" integer, "event_id" integer, "carbon" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140711200930"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateTrees (20140711200943)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "trees" ("id" serial primary key, "user_id" integer, "rand_given" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140711200943"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreatePledges (20140711201002)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "pledges" ("id" serial primary key, "about" text, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140711201002"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateEvents (20140711203151)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "events" ("id" serial primary key, "name" character varying(255), "about" text, "start_date" date, "end_date" date, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140711203151"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to DeviseCreateAdminUsers (20140716215812)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.7ms)[0m  [1mCREATE TABLE "admin_users" ("id" serial primary key, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.6ms)[0m  CREATE UNIQUE INDEX  "index_admin_users_on_email" ON "admin_users"  ("email")
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX  "index_admin_users_on_reset_password_token" ON "admin_users"  ("reset_password_token")[0m
+  [1m[35mAdminUser Exists (0.7ms)[0m  SELECT  1 AS one FROM "admin_users"  WHERE "admin_users"."email" = 'admin@example.com' LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "admin_users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2016-03-16 13:25:45.561293"], ["email", "admin@example.com"], ["encrypted_password", "$2a$10$7M.vzlXS4v13sWJSvhYCuOQvCcvA.yOR4xZyadMkNCYt/UGsFpBJm"], ["updated_at", "2016-03-16 13:25:45.561293"]]
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140716215812"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateActiveAdminComments (20140716215814)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (3.2ms)[0m  [1mCREATE TABLE "active_admin_comments" ("id" serial primary key, "namespace" character varying(255), "body" text, "resource_id" character varying(255) NOT NULL, "resource_type" character varying(255) NOT NULL, "author_id" integer, "author_type" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_active_admin_comments_on_namespace" ON "active_admin_comments"  ("namespace")
+  [1m[36m (0.8ms)[0m  [1mCREATE  INDEX  "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments"  ("author_type", "author_id")[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments"  ("resource_type", "resource_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140716215814"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Migrating to AddEventIdToPledgeAndTree (20140717230418)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "trips" ADD COLUMN "km_travelled" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trees" ADD COLUMN "event_id" integer[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "pledges" ADD COLUMN "event_id" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20140717230418"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Migrating to AddBackgroundToEvents (20140804124232)
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "events" ADD COLUMN "background_file_name" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "events" ADD COLUMN "background_content_type" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "events" ADD COLUMN "background_file_size" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "events" ADD COLUMN "background_updated_at" timestamp[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140804124232"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFlights (20140806110611)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "flights" ("id" serial primary key, "origin" character varying(255), "distance" integer, "carbon_per_km" float) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140806110611"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateCars (20140806115837)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.1ms)[0m  [1mCREATE TABLE "cars" ("id" serial primary key, "size" character varying(255), "carbon_per_km" float) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140806115837"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateVariables (20140811134412)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.2ms)[0m  [1mCREATE TABLE "variables" ("id" serial primary key, "name" character varying(255), "value" float) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140811134412"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to AddEventRefToUsers (20150716082513)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "users" ADD COLUMN "event_id" integer[0m
+  [1m[35m (0.8ms)[0m  CREATE  INDEX  "index_users_on_event_id" ON "users"  ("event_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150716082513"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to AddCarCarbonToTrips (20150720075645)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD COLUMN "car_carbon" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150720075645"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to AddFlightCarbonToTrips (20150720085550)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "trips" ADD COLUMN "flight_carbon" integer
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20150720085550"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+Migrating to AddBusCarbonAndTrainCarbonToTrips (20150720090258)
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.6ms)[0m  ALTER TABLE "trips" ADD COLUMN "bus_carbon" integer
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trips" ADD COLUMN "train_carbon" integer[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150720090258"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddSurnameToUsers (20150720134518)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD COLUMN "surname" character varying(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150720134518"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Migrating to AddDollarAmountToTree (20150820092951)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "trees" ADD COLUMN "dollar_amount" float[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150820092951"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddContributionToEvent (20150828121648)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "events" ADD COLUMN "contribution" character varying(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150828121648"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateEventUserJoinTable (20150828130309)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "events_users" ("event_id" integer NOT NULL, "user_id" integer NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150828130309"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSessions (20150901102929)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "sessions" ("id" serial primary key, "event_name" character varying(255), "user_id" integer, "km_travelled" integer, "car_carbon" integer, "bus_carbon" integer, "plane_carbon" integer, "train_carbon" integer, "total_carbon" integer, "rand_given" float, "dollar_amount" float, "pledge" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150901102929"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddEmailToSession (20150901125534)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "sessions" ADD COLUMN "email" character varying(255)[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150901125534"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Migrating to AddUserinfoToSession (20150903094737)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "sessions" ADD COLUMN "name" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "sessions" ADD COLUMN "surname" character varying(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "sessions" ADD COLUMN "first_session" timestamp[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20150903094737"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-16 15:25:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events"   ORDER BY "events"."id" ASC
+  Rendered events/index.html.haml within layouts/application (38.6ms)
+Completed 200 OK in 1447ms (Views: 1446.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2016-03-16 15:25:50 +0200
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.1.9) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.9) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.9) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.9) lib/rails/rack/logger.rb:20:in `call'
+  quiet_assets (1.0.3) lib/quiet_assets.rb:23:in `call_with_quiet_assets'
+  actionpack (4.1.9) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.5) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.5) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.9) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.9) lib/action_dispatch/middleware/static.rb:84:in `call'
+  rack (1.5.5) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.9) lib/rails/engine.rb:514:in `call'
+  railties (4.1.9) lib/rails/application.rb:144:in `call'
+  rack (1.5.5) lib/rack/lock.rb:17:in `call'
+  rack (1.5.5) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.5) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/JoshBroomberg/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.7ms)
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.5ms)
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/gems/actionpack-4.1.9/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (81.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-16 15:56:21 +0200
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"   ORDER BY "events"."id" ASC[0m
+  Rendered events/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 155ms (Views: 154.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/login" for 127.0.0.1 at 2016-03-16 15:56:30 +0200
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/devise/shared/_links.erb (1.2ms)
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (32.5ms)
+Completed 200 OK in 1139ms (Views: 1124.7ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-03-16 15:56:39 +0200
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s0RqvRNpmG2rvp+jJOTXQrteIHFTZkM+iAtkTZoOKqM=", "admin_user"=>{"email"=>"admin5@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[35mAdminUser Load (1.0ms)[0m  SELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."email" = 'admin5@example.com'  ORDER BY "admin_users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 6ms
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s0RqvRNpmG2rvp+jJOTXQrteIHFTZkM+iAtkTZoOKqM=", "admin_user"=>{"email"=>"admin5@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/devise/shared/_links.erb (0.3ms)
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (17.2ms)
+Completed 200 OK in 163ms (Views: 108.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 127.0.0.1 at 2016-03-16 15:56:43 +0200
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s0RqvRNpmG2rvp+jJOTXQrteIHFTZkM+iAtkTZoOKqM=", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Login"}
+  [1m[36mAdminUser Load (0.5ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."email" = 'admin@example.com'  ORDER BY "admin_users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "admin_users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "admin_users"."id" = 1[0m  [["current_sign_in_at", "2016-03-16 13:56:43.500339"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2016-03-16 13:56:43.500339"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2016-03-16 13:56:43.501268"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/admin
+Completed 302 Found in 79ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/admin" for 127.0.0.1 at 2016-03-16 15:56:43 +0200
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.4ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."id" = 1  ORDER BY "admin_users"."id" ASC LIMIT 1[0m
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/page/index.html.arb (94.3ms)
+Completed 200 OK in 101ms (Views: 96.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/events" for 127.0.0.1 at 2016-03-16 15:56:45 +0200
+Processing by Admin::EventsController#index as HTML
+  [1m[35mAdminUser Load (0.3ms)[0m  SELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."id" = 1  ORDER BY "admin_users"."id" ASC LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "events"  LIMIT 30 OFFSET 0) subquery_for_count[0m
+  [1m[35mTrip Load (0.6ms)[0m  SELECT "trips".* FROM "trips"
+  [1m[36mPledge Load (0.4ms)[0m  [1mSELECT "pledges".* FROM "pledges"[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/resource/index.html.arb (154.4ms)
+Completed 200 OK in 167ms (Views: 155.0ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/admin/events/new" for 127.0.0.1 at 2016-03-16 15:56:47 +0200
+Processing by Admin::EventsController#new as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1mSELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."id" = 1  ORDER BY "admin_users"."id" ASC LIMIT 1[0m
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/resource/new.html.arb (150.1ms)
+Completed 200 OK in 158ms (Views: 155.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/admin/events" for 127.0.0.1 at 2016-03-16 15:56:58 +0200
+Processing by Admin::EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AZ6d1GwDUOOuG8dZ2o/7WjlL2nzNYvnHeRwmKEEL/mo=", "event"=>{"name"=>"Test", "about"=>"", "start_date(1i)"=>"", "start_date(2i)"=>"", "start_date(3i)"=>"", "end_date(1i)"=>"", "end_date(2i)"=>"", "end_date(3i)"=>"", "contribution"=>"Generic", "background"=>#<ActionDispatch::Http::UploadedFile:0x007fb03285a748 @tempfile=#<Tempfile:/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/RackMultipart20160316-91331-kp7jwf>, @original_filename="logo.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"event[background]\"; filename=\"logo.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Event"}
+  [1m[35mAdminUser Load (0.4ms)[0m  SELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."id" = 1  ORDER BY "admin_users"."id" ASC LIMIT 1
+Unpermitted parameters: utf8, authenticity_token, commit
+Command :: file -b --mime '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-12z7my8.jpg'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-1d3vwu2.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-1d3vwu2.jpg[0]'
+Command :: convert '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-1d3vwu2.jpg[0]' -auto-orient -resize "300x300>" '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-1d3vwu220160316-91331-2yjwfb'
+Command :: file -b --mime '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-1d3vwu220160316-91331-2yjwfb'
+Command :: identify -format '%wx%h,%[exif:orientation]' '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-1d3vwu2.jpg[0]' 2>/dev/null
+Command :: identify -format %m '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-1d3vwu2.jpg[0]'
+Command :: convert '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-1d3vwu2.jpg[0]' -auto-orient -resize "100x100>" '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-1d3vwu220160316-91331-1jpgpsm'
+Command :: file -b --mime '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-1d3vwu220160316-91331-1jpgpsm'
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Command :: file -b --mime '/var/folders/z6/84f3l8gs2x180_ql7lj_rzn40000gn/T/96d6f2e7e1f705ab5e59c84a6dc009b220160316-91331-1x167ky.jpg'
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "events" ("about", "background_content_type", "background_file_name", "background_file_size", "background_updated_at", "contribution", "created_at", "name", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["about", ""], ["background_content_type", "image/jpeg"], ["background_file_name", "logo.jpg"], ["background_file_size", 1727], ["background_updated_at", "2016-03-16 13:56:58.143928"], ["contribution", "Generic"], ["created_at", "2016-03-16 13:56:58.313514"], ["name", "Test"], ["updated_at", "2016-03-16 13:56:58.313514"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/admin/events/1
+Completed 302 Found in 246ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/admin/events/1" for 127.0.0.1 at 2016-03-16 15:56:58 +0200
+Processing by Admin::EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAdminUser Load (0.3ms)[0m  SELECT  "admin_users".* FROM "admin_users"  WHERE "admin_users"."id" = 1  ORDER BY "admin_users"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered /Users/JoshBroomberg/.rvm/gems/ruby-2.2.1/bundler/gems/active_admin-9cfc45330e5a/app/views/active_admin/resource/show.html.arb (119.0ms)
+Completed 200 OK in 127ms (Views: 124.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-03-16 15:57:03 +0200
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"   ORDER BY "events"."id" ASC
+  Rendered events/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 149ms (Views: 148.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 15:57:05 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (1.8ms)
+  Rendered users/new.html.haml within layouts/application (9.7ms)
+Completed 200 OK in 169ms (Views: 168.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 15:57:35 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/_background.html.haml (0.9ms)
+  Rendered users/new.html.haml within layouts/application (2.9ms)
+Completed 200 OK in 156ms (Views: 155.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 15:57:57 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (1.2ms)
+  Rendered users/new.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 146ms (Views: 145.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 15:58:32 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/_background.html.haml (1.2ms)
+  Rendered users/new.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 155ms (Views: 154.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 15:58:53 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (1.2ms)
+  Rendered users/new.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 150ms (Views: 149.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 15:58:55 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/_background.html.haml (5.8ms)
+  Rendered users/new.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 155ms (Views: 154.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 15:59:04 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (1.1ms)
+  Rendered users/new.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 153ms (Views: 151.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 15:59:11 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/_background.html.haml (1.1ms)
+  Rendered users/new.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 147ms (Views: 146.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 15:59:50 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (0.9ms)
+  Rendered users/new.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 154ms (Views: 152.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 15:59:58 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/_background.html.haml (0.9ms)
+  Rendered users/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 151ms (Views: 150.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-03-16 16:00:44 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (1.0ms)
+  Rendered users/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 158ms (Views: 157.0ms | ActiveRecord: 0.2ms)

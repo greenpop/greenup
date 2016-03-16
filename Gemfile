@@ -39,7 +39,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'paperclip', "~> 4.1"
 gem 'aws-sdk', '< 2.0'
 
-gem 'puma'
+#gem 'puma'
 
 gem 'rails_12factor', group: :production
 
