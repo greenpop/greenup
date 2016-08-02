@@ -26,13 +26,9 @@
 				= image_tag "snapscanQR.png", class: "snapimg", align: "center"
 				= image_tag "close.png", class: "close"
 		%span.white.donate
-			= f.submit("Donate via card or Paypal", class: "button paypal")
-		%span.white.donate
-			= f.submit("Pay in cash at the event", class: "button cash")
-
+			= f.submit("Donate via Paypal", class: "button paypal")
 	%br
-	%p
-		= link_to("Create a Personal Green Pledge Instead", new_event_pledge_path(@event), class: "small-txt")
+
 
 :javascript
 	var conversion = "#{@conversion}";
@@ -50,5 +46,8 @@
 		$('.paypal').click(function() {
 			amount = $("#USD").val();
 			window.open('https://www.paypal.com/za/cgi-bin/webscr?amount=' + amount + '&' + paypal_url);
+		});
+		$('.monthly-pledge').click(function() {
+			window.open('https://www.givengain.com/cc/greenpoptreeplanting/donate/#start');
 		});
 	});

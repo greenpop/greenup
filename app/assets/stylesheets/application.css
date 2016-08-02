@@ -88,16 +88,28 @@ ul {
     font-size: 20px;
 }
 
+.page-title {
+  margin-right: 116px;
+}
+
+.calculations-text {
+  margin: 0 116px;
+}
+
 #money-amount {
-	font-size: 50px;
+	font-size: 35px;
   color: #8AE62E;
+  width: 100%;
 }
 
 #money-message {
   color:white;
-  margin: 20px;
   font-size: 22px;
   font-color:white;
+}
+
+#donation-message {
+  color: white;
 }
 
 input {
@@ -183,8 +195,9 @@ textarea {
 }
 
 .button:hover {
-  color: #375C12;
+  color: gray;
   transition: 0.3;
+  text-shadow: 0 0 0;
 }
 
 .close{
@@ -199,7 +212,7 @@ textarea {
   opacity:0.8;
 }
 
-.paypal{
+.paypal, .monthly-pledge{
   background-color: #f7933d;
   display: inline-block;
   color: white;
@@ -225,7 +238,7 @@ textarea {
   width: 330px;
 }
 
-.paypal:hover{
+.paypal:hover, .monthly-pledge:hover{
   background-color: #f7b33d;
   color: white !important;
 }

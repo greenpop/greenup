@@ -2,8 +2,8 @@
 #container.grey
 	=link_to "Back", new_event_user_path, class: "button back"
 
-	%h1.white Hello #{@user.name}, the Treemendous Traveller! 
-	%h2.white Please describe your journey to #{@event.name}
+	%h1.white.page-title Hello #{@user.name}, the Treemendous Traveller! 
+	%h2.white Please describe your average annual travels
 	%h2.white Choose all modes of transport you used
 
 	%button.transport_button.car_b Car
@@ -22,7 +22,7 @@
 				%li= label_tag(:car_km, "Km travelled by car: ")
 				%li= number_field_tag(:car_km)
 			%ul.question
-				%li= label_tag(:car_people, "Number of people: ")
+				%li= label_tag(:car_people, "Average number of people: ")
 				%li= number_field_tag(:car_people)
 			%ul.question
 				%li= label_tag(:car_id, "Car Type:")

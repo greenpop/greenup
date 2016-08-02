@@ -2,26 +2,32 @@
 .container
 	#container.grey
 		=link_to "Back", new_event_trip_path, class: "button back"
-		#money-message
+		.calculations-text#money-message
 			According to our calculations, you could GreenUp the
+			%br
 			- if @trip.carbon == 0
-				#money-amount= "small amount of carbon"
+				%span#money-amount= "small amount of carbon"
 			- else 
-				#money-amount= @trip.carbon.to_s + "kg of carbon"
-			emitted during your travels by contributing
-			
+				%span#money-amount= @trip.carbon.to_s + "kg of carbon"
+			%span emitted during your travels by contributing
 			- if @money_amount == 0
 				- @money_amount = 1
-				#money-amount= "R1"
+				%span#money-amount= "R1"
 			- else
-				#money-amount= Price.new(@money_amount).to_s 
-				or
-				#money-amount= @dollar_amount
+				%span#money-amount= Price.new(@money_amount).to_s + " (" + @dollar_amount + ")"
 			towards green projects.
+			-if @money_amount <= 25
+				That's less than a latte!
+			- elsif @money_amount <= 70
+				That's less than a pizza!
+			- else 
+				
+		%br
 	
 		.row
+			=link_to("Make monthly donations", 'https://www.givengain.com/cc/greenpoptreeplanting/donate/#start', class: "button small", style: "display: block; width: 250px; margin: 0 auto 30px auto", target: '_blank')
+			=link_to("Donate whole trees", 'http://www.quicket.co.za/events/8586-plant-trees-for-your-travels/#/', class: "button small", style: "display: block; width: 250px; margin: 0 auto 30px auto", target: '_blank')
 			- if @event.contribution == "Generic"
-				=link_to("Contribute Toward Environmental Projects", new_event_tree_path(@event, rand_amount: @money_amount, conversion: @conversion_rate, dollar_amount: (@money_amount/@conversion_rate).round(2), session: @session.id), class: "button small", style: "display: block; width: 407px; margin: 0 auto 30px auto")
+				=link_to("Contribute Toward Environmental Projects", new_event_tree_path(@event, rand_amount: @money_amount, conversion: @conversion_rate, dollar_amount: (@money_amount/@conversion_rate).round(2), session: @session.id), class: "button small", style: "display: block; width: 250px; margin: 0 auto 30px auto")
 			- else
-				=link_to("Contribute Toward Planting Trees", new_event_tree_path(@event, rand_amount: @money_amount, conversion: @conversion_rate, dollar_amount: (@money_amount/@conversion_rate).round(2), session: @session.id), class: "button small", style: "display: block; width: 325px; margin: 0 auto 30px auto")
-			=link_to("Create a Personal Green Pledge", new_event_pledge_path(@event, session:@session.id), class: "button small", style: "display: block; width: 325px; margin: 0 auto 30px auto")
+				=link_to("Donate this amount", new_event_tree_path(@event, rand_amount: @money_amount, conversion: @conversion_rate, dollar_amount: (@money_amount/@conversion_rate).round(2), session: @session.id), class: "button small", style: "display: block; width: 250px; margin: 0 auto 30px auto")

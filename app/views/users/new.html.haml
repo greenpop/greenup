@@ -2,8 +2,9 @@
 
 #container.grey
 	=link_to "Back", events_path, class: "button back"
-	%h1.green GreenUP Travel App
-	%h2.white Calculate your travel footprint to #{@event.name}
+	%h1.green.page-title GreenUP Travel App 
+	%h2.white #{@event.name}
+	%h3.white Estimate your annual travel footprint
 	
 	= form_for @user, url: event_users_path do |f|
 		%ul.white
