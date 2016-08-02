@@ -158,14 +158,14 @@ body {
 }
 
 h1.white{
-  text-shadow: 2px 2px 4px #000000;
-  font-size:45px
+/*  text-shadow: 2px 2px 4px #000000;
+*/  font-size:45px
 }
 
 p.white{
   color: white;
   padding:0;
-  text-shadow: 2px 2px 6px #000000;
+  /*text-shadow: 2px 2px 6px #000000;*/
 }
 
 .h1.outline.grey{

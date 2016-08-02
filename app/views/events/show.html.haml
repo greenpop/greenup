@@ -7,6 +7,10 @@
     %li #{@total_trips} people have completed this survey
     %li #{@total_carbon} kg of carbon were emitted in annual travel
     %li #{@total_km} km have been travelled
-  %br
   
+  %ul.white
+    %li With your help, we're one step closer to a greener planet!
+    %li Continue to make green choices. Learn how at 
+    =link_to("www.greenpop.org", 'http://www.greenpop.org', class: "med-txt")  
+  %br
   =link_to("Calculate again", new_event_user_path(@event), class: "button")
