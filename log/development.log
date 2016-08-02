@@ -10470,3 +10470,435 @@ Processing by UsersController#new as HTML
   Rendered events/_background.html.haml (1.1ms)
   Rendered users/new.html.haml within layouts/application (3.8ms)
 Completed 200 OK in 190ms (Views: 188.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-08-02 12:56:42 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/_background.html.haml (3.4ms)
+  Rendered users/new.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 243ms (Views: 241.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2016-08-02 12:58:30 +0200
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"   ORDER BY "events"."id" ASC[0m
+  Rendered events/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 271ms (Views: 270.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2016-08-02 12:58:31 +0200
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"   ORDER BY "events"."id" ASC
+  Rendered events/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 181ms (Views: 180.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-08-02 12:58:55 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (2.7ms)
+  Rendered users/new.html.haml within layouts/application (6.2ms)
+Completed 200 OK in 202ms (Views: 200.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-08-02 12:59:18 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/_background.html.haml (3.4ms)
+  Rendered users/new.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 198ms (Views: 196.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2016-08-02 12:59:37 +0200
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events"   ORDER BY "events"."id" ASC[0m
+  Rendered events/index.html.haml within layouts/application (15.2ms)
+Completed 200 OK in 195ms (Views: 194.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/events" for 127.0.0.1 at 2016-08-02 12:59:58 +0200
+Processing by EventsController#index as HTML
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"   ORDER BY "events"."id" ASC
+  Rendered events/index.html.haml within layouts/application (8.1ms)
+Completed 200 OK in 183ms (Views: 182.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/events/1/users/new" for 127.0.0.1 at 2016-08-02 13:00:11 +0200
+Processing by UsersController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered events/_background.html.haml (1.2ms)
+  Rendered users/new.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 199ms (Views: 197.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/events/1/users" for 127.0.0.1 at 2016-08-02 13:00:22 +0200
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxDilnlZfNgiMGRAgCPqubRCIgIXcANlDbjgDDCwvsM=", "user"=>{"name"=>"Allie", "surname"=>"Ivener", "email"=>"adi2hf@virginia.edu"}, "commit"=>"Get Started", "event_id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'adi2hf@virginia.edu' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "events_users" ("event_id", "user_id") VALUES ($1, $2)[0m  [["event_id", 1], ["user_id", 1]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+Redirected to http://localhost:3000/events/1/trips/new
+Completed 302 Found in 8ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/events/1/trips/new" for 127.0.0.1 at 2016-08-02 13:00:22 +0200
+Processing by TripsController#new as HTML
+  Parameters: {"event_id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered events/_background.html.haml (1.1ms)
+  [1m[36mCar Load (0.3ms)[0m  [1mSELECT "cars".* FROM "cars"[0m
+  [1m[35mFlight Load (0.3ms)[0m  SELECT "flights".* FROM "flights"
+  Rendered trips/new.html.haml within layouts/application (6.5ms)
+Completed 200 OK in 219ms (Views: 216.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/events/1/trips" for 127.0.0.1 at 2016-08-02 13:02:25 +0200
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxDilnlZfNgiMGRAgCPqubRCIgIXcANlDbjgDDCwvsM=", "car_km"=>"123", "car_people"=>"1", "car_id"=>"2", "bus_km"=>"", "train_km"=>"", "flight_id"=>"", "commit"=>"Go", "event_id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "trips" ("created_at", "event_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2016-08-02 11:02:25.736822"], ["event_id", 1], ["updated_at", "2016-08-02 11:02:25.736822"], ["user_id", 1]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mCar Load (0.2ms)[0m  [1mSELECT  "cars".* FROM "cars"  WHERE "cars"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "trips" SET "car_carbon" = $1, "updated_at" = $2 WHERE "trips"."id" = 11[0m  [["car_carbon", 61], ["updated_at", "2016-08-02 11:02:25.740414"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "trips" SET "carbon" = $1, "km_travelled" = $2, "updated_at" = $3 WHERE "trips"."id" = 11  [["carbon", 61], ["km_travelled", 123], ["updated_at", "2016-08-02 11:02:25.742403"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "sessions" ("created_at", "event_name", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2016-08-02 11:02:26.520993"], ["event_name", "Marathon"], ["updated_at", "2016-08-02 11:02:26.520993"], ["user_id", 1]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "sessions" SET "car_carbon" = $1, "email" = $2, "first_session" = $3, "km_travelled" = $4, "name" = $5, "surname" = $6, "total_carbon" = $7, "updated_at" = $8 WHERE "sessions"."id" = 11  [["car_carbon", 61], ["email", "adi2hf@virginia.edu"], ["first_session", "2016-08-02 10:33:41.729759"], ["km_travelled", 123], ["name", "Allie"], ["surname", "Ivener"], ["total_carbon", 61], ["updated_at", "2016-08-02 11:02:26.523719"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  Rendered events/_background.html.haml (4.1ms)
+  Rendered trips/create.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 1005ms (Views: 204.6ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/events/1/trips" for 127.0.0.1 at 2016-08-02 13:02:52 +0200
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxDilnlZfNgiMGRAgCPqubRCIgIXcANlDbjgDDCwvsM=", "car_km"=>"123", "car_people"=>"1", "car_id"=>"2", "bus_km"=>"", "train_km"=>"", "flight_id"=>"", "commit"=>"Go", "event_id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "trips" ("created_at", "event_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2016-08-02 11:02:52.307833"], ["event_id", 1], ["updated_at", "2016-08-02 11:02:52.307833"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mCar Load (0.2ms)[0m  SELECT  "cars".* FROM "cars"  WHERE "cars"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "trips" SET "car_carbon" = $1, "updated_at" = $2 WHERE "trips"."id" = 12  [["car_carbon", 61], ["updated_at", "2016-08-02 11:02:52.310204"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "trips" SET "carbon" = $1, "km_travelled" = $2, "updated_at" = $3 WHERE "trips"."id" = 12[0m  [["carbon", 61], ["km_travelled", 123], ["updated_at", "2016-08-02 11:02:52.311703"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sessions" ("created_at", "event_name", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2016-08-02 11:02:52.648675"], ["event_name", "Marathon"], ["updated_at", "2016-08-02 11:02:52.648675"], ["user_id", 1]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "sessions" SET "car_carbon" = $1, "email" = $2, "first_session" = $3, "km_travelled" = $4, "name" = $5, "surname" = $6, "total_carbon" = $7, "updated_at" = $8 WHERE "sessions"."id" = 12[0m  [["car_carbon", 61], ["email", "adi2hf@virginia.edu"], ["first_session", "2016-08-02 10:33:41.729759"], ["km_travelled", 123], ["name", "Allie"], ["surname", "Ivener"], ["total_carbon", 61], ["updated_at", "2016-08-02 11:02:52.652468"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered events/_background.html.haml (1.7ms)
+  Rendered trips/create.html.haml within layouts/application (8.6ms)
+Completed 200 OK in 547ms (Views: 196.6ms | ActiveRecord: 5.1ms)
+
+
+Started POST "/events/1/trips" for 127.0.0.1 at 2016-08-02 13:03:27 +0200
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxDilnlZfNgiMGRAgCPqubRCIgIXcANlDbjgDDCwvsM=", "car_km"=>"123", "car_people"=>"1", "car_id"=>"2", "bus_km"=>"", "train_km"=>"", "flight_id"=>"", "commit"=>"Go", "event_id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "trips" ("created_at", "event_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2016-08-02 11:03:27.219359"], ["event_id", 1], ["updated_at", "2016-08-02 11:03:27.219359"], ["user_id", 1]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36mCar Load (0.2ms)[0m  [1mSELECT  "cars".* FROM "cars"  WHERE "cars"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "trips" SET "car_carbon" = $1, "updated_at" = $2 WHERE "trips"."id" = 13[0m  [["car_carbon", 61], ["updated_at", "2016-08-02 11:03:27.223057"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "trips" SET "carbon" = $1, "km_travelled" = $2, "updated_at" = $3 WHERE "trips"."id" = 13  [["carbon", 61], ["km_travelled", 123], ["updated_at", "2016-08-02 11:03:27.224650"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "sessions" ("created_at", "event_name", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2016-08-02 11:03:27.958832"], ["event_name", "Marathon"], ["updated_at", "2016-08-02 11:03:27.958832"], ["user_id", 1]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "sessions" SET "car_carbon" = $1, "email" = $2, "first_session" = $3, "km_travelled" = $4, "name" = $5, "surname" = $6, "total_carbon" = $7, "updated_at" = $8 WHERE "sessions"."id" = 13  [["car_carbon", 61], ["email", "adi2hf@virginia.edu"], ["first_session", "2016-08-02 10:33:41.729759"], ["km_travelled", 123], ["name", "Allie"], ["surname", "Ivener"], ["total_carbon", 61], ["updated_at", "2016-08-02 11:03:27.962277"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered events/_background.html.haml (1.1ms)
+  Rendered trips/create.html.haml within layouts/application (5.8ms)
+Completed 200 OK in 929ms (Views: 179.8ms | ActiveRecord: 5.7ms)
+
+
+Started POST "/events/1/trips" for 127.0.0.1 at 2016-08-02 13:03:46 +0200
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxDilnlZfNgiMGRAgCPqubRCIgIXcANlDbjgDDCwvsM=", "car_km"=>"123", "car_people"=>"1", "car_id"=>"2", "bus_km"=>"", "train_km"=>"", "flight_id"=>"", "commit"=>"Go", "event_id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "trips" ("created_at", "event_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2016-08-02 11:03:46.747345"], ["event_id", 1], ["updated_at", "2016-08-02 11:03:46.747345"], ["user_id", 1]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mCar Load (0.2ms)[0m  SELECT  "cars".* FROM "cars"  WHERE "cars"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "trips" SET "car_carbon" = $1, "updated_at" = $2 WHERE "trips"."id" = 14  [["car_carbon", 61], ["updated_at", "2016-08-02 11:03:46.750115"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "trips" SET "carbon" = $1, "km_travelled" = $2, "updated_at" = $3 WHERE "trips"."id" = 14[0m  [["carbon", 61], ["km_travelled", 123], ["updated_at", "2016-08-02 11:03:46.751584"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sessions" ("created_at", "event_name", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2016-08-02 11:03:47.079554"], ["event_name", "Marathon"], ["updated_at", "2016-08-02 11:03:47.079554"], ["user_id", 1]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "sessions" SET "car_carbon" = $1, "email" = $2, "first_session" = $3, "km_travelled" = $4, "name" = $5, "surname" = $6, "total_carbon" = $7, "updated_at" = $8 WHERE "sessions"."id" = 14[0m  [["car_carbon", 61], ["email", "adi2hf@virginia.edu"], ["first_session", "2016-08-02 10:33:41.729759"], ["km_travelled", 123], ["name", "Allie"], ["surname", "Ivener"], ["total_carbon", 61], ["updated_at", "2016-08-02 11:03:47.082955"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered events/_background.html.haml (1.1ms)
+  Rendered trips/create.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 528ms (Views: 186.9ms | ActiveRecord: 5.5ms)
+
+
+Started POST "/events/1/trips" for 127.0.0.1 at 2016-08-02 13:04:50 +0200
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxDilnlZfNgiMGRAgCPqubRCIgIXcANlDbjgDDCwvsM=", "car_km"=>"123", "car_people"=>"1", "car_id"=>"2", "bus_km"=>"", "train_km"=>"", "flight_id"=>"", "commit"=>"Go", "event_id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "trips" ("created_at", "event_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2016-08-02 11:04:50.999946"], ["event_id", 1], ["updated_at", "2016-08-02 11:04:50.999946"], ["user_id", 1]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36mCar Load (0.2ms)[0m  [1mSELECT  "cars".* FROM "cars"  WHERE "cars"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "trips" SET "car_carbon" = $1, "updated_at" = $2 WHERE "trips"."id" = 15[0m  [["car_carbon", 61], ["updated_at", "2016-08-02 11:04:51.002644"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "trips" SET "carbon" = $1, "km_travelled" = $2, "updated_at" = $3 WHERE "trips"."id" = 15  [["carbon", 61], ["km_travelled", 123], ["updated_at", "2016-08-02 11:04:51.004460"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "sessions" ("created_at", "event_name", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2016-08-02 11:04:51.760202"], ["event_name", "Marathon"], ["updated_at", "2016-08-02 11:04:51.760202"], ["user_id", 1]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "sessions" SET "car_carbon" = $1, "email" = $2, "first_session" = $3, "km_travelled" = $4, "name" = $5, "surname" = $6, "total_carbon" = $7, "updated_at" = $8 WHERE "sessions"."id" = 15  [["car_carbon", 61], ["email", "adi2hf@virginia.edu"], ["first_session", "2016-08-02 10:33:41.729759"], ["km_travelled", 123], ["name", "Allie"], ["surname", "Ivener"], ["total_carbon", 61], ["updated_at", "2016-08-02 11:04:51.763572"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered events/_background.html.haml (4.0ms)
+  Rendered trips/create.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 976ms (Views: 205.2ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/events/1/trips" for 127.0.0.1 at 2016-08-02 13:05:09 +0200
+Processing by TripsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxDilnlZfNgiMGRAgCPqubRCIgIXcANlDbjgDDCwvsM=", "car_km"=>"123", "car_people"=>"1", "car_id"=>"2", "bus_km"=>"", "train_km"=>"", "flight_id"=>"", "commit"=>"Go", "event_id"=>"1"}
+  [1m[35mEvent Load (0.4ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "trips" ("created_at", "event_id", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2016-08-02 11:05:09.173613"], ["event_id", 1], ["updated_at", "2016-08-02 11:05:09.173613"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mCar Load (0.1ms)[0m  SELECT  "cars".* FROM "cars"  WHERE "cars"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "trips" SET "car_carbon" = $1, "updated_at" = $2 WHERE "trips"."id" = 16  [["car_carbon", 61], ["updated_at", "2016-08-02 11:05:09.176228"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "trips" SET "carbon" = $1, "km_travelled" = $2, "updated_at" = $3 WHERE "trips"."id" = 16[0m  [["carbon", 61], ["km_travelled", 123], ["updated_at", "2016-08-02 11:05:09.177719"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sessions" ("created_at", "event_name", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2016-08-02 11:05:09.509548"], ["event_name", "Marathon"], ["updated_at", "2016-08-02 11:05:09.509548"], ["user_id", 1]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "sessions" SET "car_carbon" = $1, "email" = $2, "first_session" = $3, "km_travelled" = $4, "name" = $5, "surname" = $6, "total_carbon" = $7, "updated_at" = $8 WHERE "sessions"."id" = 16[0m  [["car_carbon", 61], ["email", "adi2hf@virginia.edu"], ["first_session", "2016-08-02 10:33:41.729759"], ["km_travelled", 123], ["name", "Allie"], ["surname", "Ivener"], ["total_carbon", 61], ["updated_at", "2016-08-02 11:05:09.512571"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  Rendered events/_background.html.haml (3.4ms)
+  Rendered trips/create.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 563ms (Views: 216.9ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/events/1/trees/new?conversion=13.895&dollar_amount=0.5&rand_amount=7&session=16" for 127.0.0.1 at 2016-08-02 13:05:28 +0200
+Processing by TreesController#new as HTML
+  Parameters: {"conversion"=>"13.895", "dollar_amount"=>"0.5", "rand_amount"=>"7", "session"=>"16", "event_id"=>"1"}
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", "1"]]
+  [1m[36mSession Load (0.2ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  Rendered events/_background.html.haml (2.7ms)
+  Rendered trees/new.html.haml within layouts/application (6.3ms)
+Completed 200 OK in 187ms (Views: 184.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/events/1/trees" for 127.0.0.1 at 2016-08-02 13:05:35 +0200
+Processing by TreesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxDilnlZfNgiMGRAgCPqubRCIgIXcANlDbjgDDCwvsM=", "tree"=>{"rand_given"=>"123", "dollar_amount"=>"8.85", "session_id"=>"16"}, "commit"=>"Donate via Paypal", "event_id"=>"1"}
+  [1m[35mEvent Load (0.5ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+Unpermitted parameters: session_id
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "trees" ("created_at", "dollar_amount", "event_id", "rand_given", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2016-08-02 11:05:35.879931"], ["dollar_amount", 8.85], ["event_id", 1], ["rand_given", 123], ["updated_at", "2016-08-02 11:05:35.879931"], ["user_id", 1]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mEvent Load (0.1ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mSession Load (0.2ms)[0m  SELECT  "sessions".* FROM "sessions"  WHERE "sessions"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "sessions" SET "dollar_amount" = $1, "rand_given" = $2, "updated_at" = $3 WHERE "sessions"."id" = 16  [["dollar_amount", 8.85], ["rand_given", 123.0], ["updated_at", "2016-08-02 11:05:35.884911"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  Rendered user_mailer/tree_email.html (0.1ms)
+
+UserMailer#tree_email: processed outbound mail in 21.8ms
+
+Sent mail to adi2hf@virginia.edu (18.9ms)
+Date: Tue, 02 Aug 2016 13:05:35 +0200
+From: info@greenpop.org
+To: adi2hf@virginia.edu
+Message-ID: <57a07e7fde463_55943fd405ae7978253bd@Allies-MacBook-Pro.local.mail>
+Subject: Thank you for using the GreenUp Travel App!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-SMTPAPI: {}
+
+<html>
+<head>
+</head>
+<body>
+	<div style="background-color:#96D437; color: #323533; width: 90%; margin: 0 auto;padding: 20px;font-family: Helvetica;">
+		<img src = "http://greenup.herokuapp.com/assets/home-15f574ac1f133f6478fa773a2cb0745a.jpg", style= "width: 100%; border-radius: 10px" >
+		<h1 style = "font-size: 45px">Dear Eco-Warrior,</h1>
+			<p style = "font-size: 20px; color:#323533">Thanks for using the Carbon Calculator App to learn more about the carbon footprint of your travel to Marathon! You donated R 123 or USD $8.85 to planting trees in Southern Africa.</p>
+			<p style = "font-size: 20px; color:#323533">We think its really important to keep learning about our environmental impact so we can get active (not anxious) about the future of our planet. Join us as we plant trees and have fun doing it!</p>
+	</div>
+	<div style="    background-color: white;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    color: #323533;
+    font-family: Helvetica;">
+    	<a href = "http://www.greenpop.org"><img style="width: 30%; margin-left: 38%", src="http://www.another-day.co.za/wp-content/uploads/2014/03/Greenpop-logo-long--750x256.jpg"></img></a>
+		<h1>Come join the Treevolution! Here's how:</h1>
+		<ul style="font-size: 20px; line-height: 37px; color: #323533;">
+			<li style = "color: #323533;">Become an Active Citizen and <a href = "http://www.greenpop.org/newsletter-sign-up/" style = "color: #323533;">sign up</a> for our e-newsletter chock full of green news, tools, events and activities. </li>
+			<li style = "color: #323533;">Sponsor a tree <a href = "http://www.quicket.co.za/organisers/1469-greenpop-tree-campaigns" style="color: #323533;">here!</a></li>
+			<li style = "color: #323533;">Follow us on social media:
+				<br>
+				<br>
+				<div style = "text-align:center">
+					<a style = "text-decoration: none; position:relative;  margin-left: 8px;" href = "http://www.facebook.com/GreenpopTreevolution"><img src="http://www.bostongreenfest.org/images/Facebook-ButtonLeaves.png" style = "width:50px">
+					</a>
+					<a style = "text-decoration: none; position:relative;  margin-left: 8px;" href = "http://twitter.com/greenpopSA"><img src="http://www.bostongreenfest.org/images/twitter-buttonLeaves.png" style = "width:50px"></img>
+					</a>
+					<a style = "text-decoration: none; position:relative; top: 9px; margin-left: 8px;" href = "http://www.youtube.com/user/GreenpopTreevolution"><img src="http://malamahawaii.org/wp-content/themes/blogs-mu/_inc/images/youtube-icon.png" style = "width:50px"></img>
+					</a>
+					<a style = "text-decoration: none; position:relative; top: 5px; margin-left: 8px;" href = "https://instagram.com/greenpopsa/?hl=en"><img src="http://www.bostongreenfest.org/images/instagram-buttonGreen.png" style = "width:50px"></img>
+				</div>
+			</li>
+		<ul>
+	</div>
+</body>
+</html>
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 61ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2016-08-02 13:05:35 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.3ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "trips"  WHERE "trips"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT "trips"."carbon" FROM "trips"  WHERE "trips"."event_id" = $1  [["event_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mSELECT "trips"."km_travelled" FROM "trips"  WHERE "trips"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."event_id" = $1  [["event_id", 1]]
+  Rendered events/_background.html.haml (1.7ms)
+  Rendered events/show.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 238ms (Views: 231.5ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/events/1/trees" for 127.0.0.1 at 2016-08-02 13:05:44 +0200
+Processing by TreesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yxDilnlZfNgiMGRAgCPqubRCIgIXcANlDbjgDDCwvsM=", "tree"=>{"rand_given"=>"123", "dollar_amount"=>"8.85", "session_id"=>"16"}, "commit"=>"I have paid through Snapscan", "event_id"=>"1"}
+  [1m[36mEvent Load (0.2ms)[0m  [1mSELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Unpermitted parameters: session_id
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "trees" ("created_at", "dollar_amount", "event_id", "rand_given", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2016-08-02 11:05:44.628779"], ["dollar_amount", 8.85], ["event_id", 1], ["rand_given", 123], ["updated_at", "2016-08-02 11:05:44.628779"], ["user_id", 1]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mSession Load (0.2ms)[0m  [1mSELECT  "sessions".* FROM "sessions"  WHERE "sessions"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+  Rendered user_mailer/tree_email.html (0.2ms)
+
+UserMailer#tree_email: processed outbound mail in 21.8ms
+
+Sent mail to adi2hf@virginia.edu (13.5ms)
+Date: Tue, 02 Aug 2016 13:05:44 +0200
+From: info@greenpop.org
+To: adi2hf@virginia.edu
+Message-ID: <57a07e88a0907_55943fd408da8bdc254b4@Allies-MacBook-Pro.local.mail>
+Subject: Thank you for using the GreenUp Travel App!
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+X-SMTPAPI: {}
+
+<html>
+<head>
+</head>
+<body>
+	<div style="background-color:#96D437; color: #323533; width: 90%; margin: 0 auto;padding: 20px;font-family: Helvetica;">
+		<img src = "http://greenup.herokuapp.com/assets/home-15f574ac1f133f6478fa773a2cb0745a.jpg", style= "width: 100%; border-radius: 10px" >
+		<h1 style = "font-size: 45px">Dear Eco-Warrior,</h1>
+			<p style = "font-size: 20px; color:#323533">Thanks for using the Carbon Calculator App to learn more about the carbon footprint of your travel to Marathon! You donated R 123 or USD $8.85 to planting trees in Southern Africa.</p>
+			<p style = "font-size: 20px; color:#323533">We think its really important to keep learning about our environmental impact so we can get active (not anxious) about the future of our planet. Join us as we plant trees and have fun doing it!</p>
+	</div>
+	<div style="    background-color: white;
+    padding: 20px;
+    width: 90%;
+    margin: 0 auto;
+    color: #323533;
+    font-family: Helvetica;">
+    	<a href = "http://www.greenpop.org"><img style="width: 30%; margin-left: 38%", src="http://www.another-day.co.za/wp-content/uploads/2014/03/Greenpop-logo-long--750x256.jpg"></img></a>
+		<h1>Come join the Treevolution! Here's how:</h1>
+		<ul style="font-size: 20px; line-height: 37px; color: #323533;">
+			<li style = "color: #323533;">Become an Active Citizen and <a href = "http://www.greenpop.org/newsletter-sign-up/" style = "color: #323533;">sign up</a> for our e-newsletter chock full of green news, tools, events and activities. </li>
+			<li style = "color: #323533;">Sponsor a tree <a href = "http://www.quicket.co.za/organisers/1469-greenpop-tree-campaigns" style="color: #323533;">here!</a></li>
+			<li style = "color: #323533;">Follow us on social media:
+				<br>
+				<br>
+				<div style = "text-align:center">
+					<a style = "text-decoration: none; position:relative;  margin-left: 8px;" href = "http://www.facebook.com/GreenpopTreevolution"><img src="http://www.bostongreenfest.org/images/Facebook-ButtonLeaves.png" style = "width:50px">
+					</a>
+					<a style = "text-decoration: none; position:relative;  margin-left: 8px;" href = "http://twitter.com/greenpopSA"><img src="http://www.bostongreenfest.org/images/twitter-buttonLeaves.png" style = "width:50px"></img>
+					</a>
+					<a style = "text-decoration: none; position:relative; top: 9px; margin-left: 8px;" href = "http://www.youtube.com/user/GreenpopTreevolution"><img src="http://malamahawaii.org/wp-content/themes/blogs-mu/_inc/images/youtube-icon.png" style = "width:50px"></img>
+					</a>
+					<a style = "text-decoration: none; position:relative; top: 5px; margin-left: 8px;" href = "https://instagram.com/greenpopsa/?hl=en"><img src="http://www.bostongreenfest.org/images/instagram-buttonGreen.png" style = "width:50px"></img>
+				</div>
+			</li>
+		<ul>
+	</div>
+</body>
+</html>
+Redirected to http://localhost:3000/events/1
+Completed 302 Found in 50ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2016-08-02 13:05:44 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mEvent Load (0.2ms)[0m  SELECT  "events".* FROM "events"  WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "trips"  WHERE "trips"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT "trips"."carbon" FROM "trips"  WHERE "trips"."event_id" = $1  [["event_id", 1]]
+  [1m[36m (0.1ms)[0m  [1mSELECT "trips"."km_travelled" FROM "trips"  WHERE "trips"."event_id" = $1[0m  [["event_id", 1]]
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM "pledges"  WHERE "pledges"."event_id" = $1  [["event_id", 1]]
+  Rendered events/_background.html.haml (1.5ms)
+  Rendered events/show.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 242ms (Views: 236.8ms | ActiveRecord: 0.8ms)

@@ -43,7 +43,7 @@
 				%li= number_field_tag(:train_km, step: 0.5)
 			
 		.transport.plane
-			.tip Did you know? Engineers are currently working on environmentally-friendly biofuels to use in place of kerosene for aviation!
+			.tip Did you know? Engineers are currently working on environmentally-friendly biofuels for aviation!
 			= image_tag "plane1.png", class: "logo_trips", align: "left"
 			%ul.question
 				%li= select_tag(:flight_id, options_for_select(Flight.select), prompt: "Origin of Flight")
