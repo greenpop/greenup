@@ -175,6 +175,12 @@ textarea {
   transition: 0.3;
 }
 
+.button.small.donate{
+    display: inline-block;
+    width: 250px;
+    margin: 0 30px auto auto;
+}
+
 .button {
 	font-family: "Roboto", sans-serif;
 	font-size: 32px;
